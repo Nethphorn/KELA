@@ -1,0 +1,28 @@
+min_version: 2.1.0
+
+pre-commit:
+  parallel: true
+  commands:
+    format:
+      glob: '*.{ts,tsx,js,jsx,json,md,yml,yaml}'
+      run: pnpm exec prettier --check {staged_files}
+    lint:
+      glob: '*.{ts,tsx,js,jsx}'
+      run: pnpm exec eslint {staged_files}
+    typecheck:
+      run: pnpm run typecheck
+    unit:
+      glob: '*.{test.ts,test.tsx}'
+      run: pnpm exec jest --config jest.config.cjs --findRelatedTests {staged_files}
+
+pre-push:
+  parallel: true
+  commands:
+    lint:
+      run: pnpm run lint
+    unit:
+      run: pnpm run test:unit
+    build:
+      run: pnpm run build
+    e2e:
+      run: pnpm run test:e2e
