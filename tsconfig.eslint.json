@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "src/**/*",
+    "test/**/*",
+    "playwright-tests/**/*",
+    "*.config.js",
+    "*.config.cjs",
+    "*.config.ts"
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "noEmit": true
+  }
+}
