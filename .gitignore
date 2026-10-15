@@ -10,3 +10,8 @@ test-results/
 .env.*
 !.env.example
 .DS_Store
+
+# One-off local verification scratch files
+verify-render.cjs
+verify-preview.ps1
+kela-render.png

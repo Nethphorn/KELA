@@ -157,6 +157,7 @@ export default [
     ignores: [
       'node_modules/',
       'dist/',
+      'dist-web/',
       'package-lock.json',
       '*.min.js',
       'coverage/',
@@ -166,6 +167,8 @@ export default [
       'test-results/',
       '*.md',
       '.vscode/',
+      'verify-render.cjs',
+      'verify-preview.ps1',
     ],
   },
 ]
