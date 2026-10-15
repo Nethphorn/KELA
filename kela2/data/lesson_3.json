@@ -1,0 +1,108 @@
+{
+  "id": 3,
+  "owner": "Houykea",
+  "title_km": "វិធីដក",
+  "title_en": "Subtraction & Regrouping",
+  "questions_per_session": 5,
+  "pass_percent": 60,
+  "questions": [
+    {
+      "id": "3-01",
+      "type": "choice",
+      "prompt_km": "៥ − ២ = ?",
+      "prompt_en": "5 − 2 = ?",
+      "visual": "៥ − ២",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "7"
+      ],
+      "answer": 1,
+      "explanation_en": "5 − 2 = 3.",
+      "tts_text": "ប្រាំ ដក ពីរ ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "3-02",
+      "type": "choice",
+      "prompt_km": "៨ − ៣ = ?",
+      "prompt_en": "8 − 3 = ?",
+      "visual": "៨ − ៣",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "11"
+      ],
+      "answer": 1,
+      "explanation_en": "8 − 3 = 5.",
+      "tts_text": "ប្រាំបី ដក បី ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "3-03",
+      "type": "choice",
+      "prompt_km": "៩ − ៤ = ?",
+      "prompt_en": "9 − 4 = ?",
+      "visual": "៩ − ៤",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "13"
+      ],
+      "answer": 1,
+      "explanation_en": "9 − 4 = 5.",
+      "tts_text": "ប្រាំបួន ដក បួន ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "3-04",
+      "type": "choice",
+      "prompt_km": "១០ − ៦ = ?",
+      "prompt_en": "10 − 6 = ?",
+      "visual": "១០ − ៦",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "16"
+      ],
+      "answer": 1,
+      "explanation_en": "10 − 6 = 4.",
+      "tts_text": "ដប់ ដក ប្រាំមួយ ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "3-05",
+      "type": "choice",
+      "prompt_km": "៧ − ៧ = ?",
+      "prompt_en": "7 − 7 = ?",
+      "visual": "៧ − ៧",
+      "options": [
+        "0",
+        "1",
+        "7",
+        "14"
+      ],
+      "answer": 0,
+      "explanation_en": "Taking away everything leaves 0.",
+      "tts_text": "ប្រាំពីរ ដក ប្រាំពីរ ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "3-06",
+      "type": "choice",
+      "prompt_km": "១២ − ៥ = ?",
+      "prompt_en": "12 − 5 = ?",
+      "visual": "១២ − ៥",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "17"
+      ],
+      "answer": 1,
+      "explanation_en": "Borrow from the tens: 12 − 5 = 7.",
+      "tts_text": "ដប់ពីរ ដក ប្រាំ ស្មើនឹងប៉ុន្មាន?"
+    }
+  ],
+  "placeholder": true,
+  "note": "Sample data only - Houykea replaces this file with the extracted lesson and removes 'placeholder'."
+}

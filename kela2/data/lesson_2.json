@@ -1,0 +1,108 @@
+{
+  "id": 2,
+  "owner": "Prathna",
+  "title_km": "វិធីបូក",
+  "title_en": "Addition Focus",
+  "questions_per_session": 5,
+  "pass_percent": 60,
+  "questions": [
+    {
+      "id": "2-01",
+      "type": "choice",
+      "prompt_km": "១ + ១ = ?",
+      "prompt_en": "1 + 1 = ?",
+      "visual": "🍎 + 🍎",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation_en": "1 + 1 = 2.",
+      "tts_text": "មួយ បូក មួយ ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "2-02",
+      "type": "choice",
+      "prompt_km": "២ + ៣ = ?",
+      "prompt_en": "2 + 3 = ?",
+      "visual": "២ + ៣",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "answer": 1,
+      "explanation_en": "2 + 3 = 5.",
+      "tts_text": "ពីរ បូក បី ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "2-03",
+      "type": "choice",
+      "prompt_km": "៤ + ៤ = ?",
+      "prompt_en": "4 + 4 = ?",
+      "visual": "៤ + ៤",
+      "options": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explanation_en": "4 + 4 = 8.",
+      "tts_text": "បួន បូក បួន ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "2-04",
+      "type": "choice",
+      "prompt_km": "៥ + ៣ = ?",
+      "prompt_en": "5 + 3 = ?",
+      "visual": "៥ + ៣",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "answer": 1,
+      "explanation_en": "5 + 3 = 8.",
+      "tts_text": "ប្រាំ បូក បី ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "2-05",
+      "type": "choice",
+      "prompt_km": "៦ + ៤ = ?",
+      "prompt_en": "6 + 4 = ?",
+      "visual": "៦ + ៤",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "answer": 1,
+      "explanation_en": "6 + 4 = 10.",
+      "tts_text": "ប្រាំមួយ បូក បួន ស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "2-06",
+      "type": "choice",
+      "prompt_km": "៧ + ២ = ?",
+      "prompt_en": "7 + 2 = ?",
+      "visual": "៧ + ២",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "11"
+      ],
+      "answer": 1,
+      "explanation_en": "7 + 2 = 9.",
+      "tts_text": "ប្រាំពីរ បូក ពីរ ស្មើនឹងប៉ុន្មាន?"
+    }
+  ],
+  "placeholder": true,
+  "note": "Sample data only - Prathna replaces this file with the extracted lesson and removes 'placeholder'."
+}

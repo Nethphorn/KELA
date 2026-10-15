@@ -1,0 +1,1043 @@
+{
+  "id": 1,
+  "owner": "Tito",
+  "title_km": "ចំនួនដល់ 100 000",
+  "title_en": "Numbers up to 100,000",
+  "source": "Khmer Official Math book (MoEYS), Lesson 1, pages 1-3 and 5-6",
+  "questions_per_session": 8,
+  "pass_percent": 60,
+  "notes": [
+    {
+      "page": 1,
+      "title_km": "ចំនួនដល់ 100 000",
+      "text_en": "10 000 ten times is 100 000, read មួយសែន (one hundred thousand)."
+    },
+    {
+      "page": 2,
+      "title_km": "ខ្ទង់និងតម្លៃខ្ទង់",
+      "text_en": "Places: ten-thousands, thousands, hundreds, tens, ones. 46 306 = 40 000 + 6 000 + 300 + 0 + 6."
+    },
+    {
+      "page": 3,
+      "title_km": "ការប្រៀបធៀបនិងរៀបលំដាប់ចំនួន",
+      "text_en": "Compare digits from the highest place; compare two numbers at a time to order them."
+    },
+    {
+      "page": 5,
+      "title_km": "ការបង្គត់ចំនួនត្រឹមខ្ទង់ម៉ឺន",
+      "text_en": "To round, check the digit one place to the right: 0–4 round down, 5–9 round up."
+    }
+  ],
+  "rounding_table_p6_ex2": {
+    "34 564": {
+      "tens": "34 560",
+      "hundreds": "34 600",
+      "thousands": "35 000",
+      "ten-thousands": "30 000"
+    },
+    "78 045": {
+      "tens": "78 050",
+      "hundreds": "78 000",
+      "thousands": "78 000",
+      "ten-thousands": "80 000"
+    },
+    "98 643": {
+      "tens": "98 640",
+      "hundreds": "98 600",
+      "thousands": "99 000",
+      "ten-thousands": "100 000"
+    },
+    "81 606": {
+      "tens": "81 610",
+      "hundreds": "81 600",
+      "thousands": "82 000",
+      "ten-thousands": "80 000"
+    },
+    "16 780": {
+      "tens": "16 780",
+      "hundreds": "16 800",
+      "thousands": "17 000",
+      "ten-thousands": "20 000"
+    },
+    "26 876": {
+      "tens": "26 880",
+      "hundreds": "26 900",
+      "thousands": "27 000",
+      "ten-thousands": "30 000"
+    },
+    "91 468": {
+      "tens": "91 470",
+      "hundreds": "91 500",
+      "thousands": "91 000",
+      "ten-thousands": "90 000"
+    },
+    "96 678": {
+      "tens": "96 680",
+      "hundreds": "96 700",
+      "thousands": "97 000",
+      "ten-thousands": "100 000"
+    }
+  },
+  "questions": [
+    {
+      "id": "1-01",
+      "type": "choice",
+      "topic": "expanded_form",
+      "source": "p2 example",
+      "prompt_km": "ចូរសរសេរចំនួន 46 306 ជាទម្រង់ពង្រាយ",
+      "prompt_en": "Write 46 306 in expanded form.",
+      "visual": "46 306",
+      "options": [
+        "40 000 + 6 000 + 300 + 0 + 6",
+        "60 000 + 4 000 + 300 + 0 + 6",
+        "60 000 + 0 + 300 + 60 + 4",
+        "40 000 + 6 000 + 300 + 0 + 60"
+      ],
+      "answer": 0,
+      "explanation_en": "46 306 = 40 000 + 6 000 + 300 + 0 + 6.",
+      "tts_text": "ចូរសរសេរចំនួន 46 306 ជាទម្រង់ពង្រាយ"
+    },
+    {
+      "id": "1-02",
+      "type": "choice",
+      "topic": "expanded_form",
+      "source": "p2 ex1ក",
+      "prompt_km": "ចូរសរសេរចំនួន 45 675 ជាទម្រង់ពង្រាយ",
+      "prompt_en": "Write 45 675 in expanded form.",
+      "visual": "45 675",
+      "options": [
+        "40 000 + 5 000 + 600 + 70 + 50",
+        "40 000 + 5 000 + 600 + 70 + 5",
+        "50 000 + 4 000 + 600 + 70 + 5",
+        "50 000 + 7 000 + 600 + 50 + 4"
+      ],
+      "answer": 1,
+      "explanation_en": "45 675 = 40 000 + 5 000 + 600 + 70 + 5.",
+      "tts_text": "ចូរសរសេរចំនួន 45 675 ជាទម្រង់ពង្រាយ"
+    },
+    {
+      "id": "1-03",
+      "type": "choice",
+      "topic": "expanded_form",
+      "source": "p2 ex1ខ",
+      "prompt_km": "ចូរសរសេរចំនួន 80 960 ជាទម្រង់ពង្រាយ",
+      "prompt_en": "Write 80 960 in expanded form.",
+      "visual": "80 960",
+      "options": [
+        "0 + 6 000 + 900 + 0 + 8",
+        "800 000 + 0 + 9 000 + 600 + 0",
+        "80 000 + 0 + 900 + 60 + 0",
+        "0 + 8 000 + 900 + 60 + 0"
+      ],
+      "answer": 2,
+      "explanation_en": "80 960 = 80 000 + 0 + 900 + 60 + 0.",
+      "tts_text": "ចូរសរសេរចំនួន 80 960 ជាទម្រង់ពង្រាយ"
+    },
+    {
+      "id": "1-04",
+      "type": "choice",
+      "topic": "expanded_form",
+      "source": "p2 ex1គ",
+      "prompt_km": "ចូរសរសេរចំនួន 89 970 ជាទម្រង់ពង្រាយ",
+      "prompt_en": "Write 89 970 in expanded form.",
+      "visual": "89 970",
+      "options": [
+        "90 000 + 8 000 + 900 + 70 + 0",
+        "0 + 7 000 + 900 + 90 + 8",
+        "800 000 + 90 000 + 9 000 + 700 + 0",
+        "80 000 + 9 000 + 900 + 70 + 0"
+      ],
+      "answer": 3,
+      "explanation_en": "89 970 = 80 000 + 9 000 + 900 + 70 + 0.",
+      "tts_text": "ចូរសរសេរចំនួន 89 970 ជាទម្រង់ពង្រាយ"
+    },
+    {
+      "id": "1-05",
+      "type": "choice",
+      "topic": "expanded_form",
+      "source": "p2 ex1ឃ",
+      "prompt_km": "ចូរសរសេរចំនួន 95 043 ជាទម្រង់ពង្រាយ",
+      "prompt_en": "Write 95 043 in expanded form.",
+      "visual": "95 043",
+      "options": [
+        "90 000 + 5 000 + 0 + 40 + 3",
+        "50 000 + 9 000 + 0 + 40 + 3",
+        "30 000 + 4 000 + 0 + 50 + 9",
+        "90 000 + 5 000 + 0 + 40 + 30"
+      ],
+      "answer": 0,
+      "explanation_en": "95 043 = 90 000 + 5 000 + 0 + 40 + 3.",
+      "tts_text": "ចូរសរសេរចំនួន 95 043 ជាទម្រង់ពង្រាយ"
+    },
+    {
+      "id": "1-06",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ក",
+      "prompt_km": "ក្នុងចំនួន 77 896 លេខ 7 នៅខ្ទង់ម៉ឺន មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 77 896, what is the value of the digit 7 in the ten-thousands place?",
+      "visual": "77 896",
+      "options": [
+        "70",
+        "70 000",
+        "7 000",
+        "700"
+      ],
+      "answer": 1,
+      "explanation_en": "The digit 7 in the ten-thousands place is worth 70 000.",
+      "tts_text": "ក្នុងចំនួន 77 896 លេខ 7 នៅខ្ទង់ម៉ឺន មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-07",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ក",
+      "prompt_km": "ក្នុងចំនួន 77 896 លេខ 7 នៅខ្ទង់ពាន់ មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 77 896, what is the value of the digit 7 in the thousands place?",
+      "visual": "77 896",
+      "options": [
+        "700",
+        "70",
+        "7 000",
+        "70 000"
+      ],
+      "answer": 2,
+      "explanation_en": "The digit 7 in the thousands place is worth 7 000.",
+      "tts_text": "ក្នុងចំនួន 77 896 លេខ 7 នៅខ្ទង់ពាន់ មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-08",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ក",
+      "prompt_km": "ក្នុងចំនួន 77 896 លេខ 8 នៅខ្ទង់រយ មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 77 896, what is the value of the digit 8 in the hundreds place?",
+      "visual": "77 896",
+      "options": [
+        "80 000",
+        "8 000",
+        "80",
+        "800"
+      ],
+      "answer": 3,
+      "explanation_en": "The digit 8 in the hundreds place is worth 800.",
+      "tts_text": "ក្នុងចំនួន 77 896 លេខ 8 នៅខ្ទង់រយ មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-09",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ក",
+      "prompt_km": "ក្នុងចំនួន 77 896 លេខ 9 នៅខ្ទង់ដប់ មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 77 896, what is the value of the digit 9 in the tens place?",
+      "visual": "77 896",
+      "options": [
+        "90",
+        "90 000",
+        "9 000",
+        "900"
+      ],
+      "answer": 0,
+      "explanation_en": "The digit 9 in the tens place is worth 90.",
+      "tts_text": "ក្នុងចំនួន 77 896 លេខ 9 នៅខ្ទង់ដប់ មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-10",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ខ",
+      "prompt_km": "ក្នុងចំនួន 90 569 លេខ 9 នៅខ្ទង់ម៉ឺន មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 90 569, what is the value of the digit 9 in the ten-thousands place?",
+      "visual": "90 569",
+      "options": [
+        "90",
+        "90 000",
+        "9 000",
+        "900"
+      ],
+      "answer": 1,
+      "explanation_en": "The digit 9 in the ten-thousands place is worth 90 000.",
+      "tts_text": "ក្នុងចំនួន 90 569 លេខ 9 នៅខ្ទង់ម៉ឺន មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-11",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ខ",
+      "prompt_km": "ក្នុងចំនួន 90 569 លេខ 0 នៅខ្ទង់ពាន់ មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 90 569, what is the value of the digit 0 in the thousands place?",
+      "visual": "90 569",
+      "options": [
+        "10",
+        "100",
+        "0",
+        "1"
+      ],
+      "answer": 2,
+      "explanation_en": "The digit 0 in the thousands place is worth 0.",
+      "tts_text": "ក្នុងចំនួន 90 569 លេខ 0 នៅខ្ទង់ពាន់ មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-12",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ខ",
+      "prompt_km": "ក្នុងចំនួន 90 569 លេខ 9 នៅខ្ទង់រាយ មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 90 569, what is the value of the digit 9 in the ones place?",
+      "visual": "90 569",
+      "options": [
+        "90 000",
+        "9 000",
+        "900",
+        "9"
+      ],
+      "answer": 3,
+      "explanation_en": "The digit 9 in the ones place is worth 9.",
+      "tts_text": "ក្នុងចំនួន 90 569 លេខ 9 នៅខ្ទង់រាយ មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-13",
+      "type": "choice",
+      "topic": "place_value",
+      "source": "p2 ex2ខ",
+      "prompt_km": "ក្នុងចំនួន 90 569 លេខ 6 នៅខ្ទង់ដប់ មានតម្លៃស្មើនឹងប៉ុន្មាន?",
+      "prompt_en": "In 90 569, what is the value of the digit 6 in the tens place?",
+      "visual": "90 569",
+      "options": [
+        "60",
+        "60 000",
+        "6 000",
+        "600"
+      ],
+      "answer": 0,
+      "explanation_en": "The digit 6 in the tens place is worth 60.",
+      "tts_text": "ក្នុងចំនួន 90 569 លេខ 6 នៅខ្ទង់ដប់ មានតម្លៃស្មើនឹងប៉ុន្មាន?"
+    },
+    {
+      "id": "1-14",
+      "type": "choice",
+      "topic": "read_number",
+      "source": "p1 ex2ក (check wording)",
+      "prompt_km": "ប្រាំមួយម៉ឺនពីរពាន់ហាសិបប្រាំ គឺជាចំនួនអ្វី?",
+      "prompt_en": "Which numeral is “sixty-two thousand fifty-five”?",
+      "visual": "៦ម៉ឺន ២ពាន់ ហាសិបប្រាំ",
+      "options": [
+        "60 255",
+        "62 055",
+        "62 550",
+        "6 255"
+      ],
+      "answer": 1,
+      "explanation_en": "6 ten-thousands, 2 thousands, 0 hundreds, 55.",
+      "tts_text": "ប្រាំមួយម៉ឺនពីរពាន់ហាសិបប្រាំ គឺជាចំនួនអ្វី?",
+      "verify_against_book": true
+    },
+    {
+      "id": "1-15",
+      "type": "choice",
+      "topic": "read_number",
+      "source": "p1 ex2ខ (check wording)",
+      "prompt_km": "បីម៉ឺនប្រាំបួនពាន់ប្រាំបីរយចិតសិបប្រាំបួន គឺជាចំនួនអ្វី?",
+      "prompt_en": "Which numeral is “thirty-nine thousand eight hundred seventy-nine”?",
+      "visual": "៣ម៉ឺន ៩ពាន់ ៨រយ ចិតសិបប្រាំបួន",
+      "options": [
+        "93 879",
+        "38 979",
+        "39 879",
+        "39 978"
+      ],
+      "answer": 2,
+      "explanation_en": "3 ten-thousands, 9 thousands, 8 hundreds, 79.",
+      "tts_text": "បីម៉ឺនប្រាំបួនពាន់ប្រាំបីរយចិតសិបប្រាំបួន គឺជាចំនួនអ្វី?",
+      "verify_against_book": true
+    },
+    {
+      "id": "1-16",
+      "type": "choice",
+      "topic": "read_number",
+      "source": "authored",
+      "prompt_km": "ប្រាំបួនម៉ឺនប្រាំបួនពាន់ប្រាំបួនរយកៅសិបប្រាំបួន គឺជាចំនួនអ្វី?",
+      "prompt_en": "Which numeral is the largest 5-digit number in words?",
+      "visual": "៩ម៉ឺន ៩ពាន់ ៩រយ កៅសិបប្រាំបួន",
+      "options": [
+        "90 999",
+        "99 099",
+        "100 000",
+        "99 999"
+      ],
+      "answer": 3,
+      "explanation_en": "Nine in every place.",
+      "tts_text": "ប្រាំបួនម៉ឺនប្រាំបួនពាន់ប្រាំបួនរយកៅសិបប្រាំបួន គឺជាចំនួនអ្វី?"
+    },
+    {
+      "id": "1-17",
+      "type": "choice",
+      "topic": "read_number",
+      "source": "p1 intro",
+      "prompt_km": "១០ ០០០ ដប់ដងគឺប៉ុន្មាន?",
+      "prompt_en": "10 000 times ten is…",
+      "visual": "10 000 × 10",
+      "options": [
+        "100 000",
+        "10 000",
+        "1 000 000",
+        "20 000"
+      ],
+      "answer": 0,
+      "explanation_en": "Ten ten-thousands make one hundred thousand (មួយសែន).",
+      "tts_text": "១០ ០០០ ដប់ដងគឺប៉ុន្មាន?"
+    },
+    {
+      "id": "1-18",
+      "type": "choice",
+      "topic": "sequence",
+      "source": "p1 ex3ក",
+      "prompt_km": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ",
+      "prompt_en": "Fill in the missing number in the pattern.",
+      "visual": "10 000 ; 20 000 ; … ; 40 000 ; 50 000 ; 60 000 ; 70 000",
+      "options": [
+        "50 000",
+        "30 000",
+        "40 000",
+        "20 000"
+      ],
+      "answer": 1,
+      "explanation_en": "The pattern goes up by 10 000 each time, so the missing number is 30 000.",
+      "tts_text": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ"
+    },
+    {
+      "id": "1-19",
+      "type": "choice",
+      "topic": "sequence",
+      "source": "p1 ex3ក",
+      "prompt_km": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ",
+      "prompt_en": "Fill in the missing number in the pattern.",
+      "visual": "10 000 ; 20 000 ; 30 000 ; … ; 50 000 ; 60 000 ; 70 000",
+      "options": [
+        "30 000",
+        "60 000",
+        "40 000",
+        "50 000"
+      ],
+      "answer": 2,
+      "explanation_en": "The pattern goes up by 10 000 each time, so the missing number is 40 000.",
+      "tts_text": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ"
+    },
+    {
+      "id": "1-20",
+      "type": "choice",
+      "topic": "sequence",
+      "source": "p1 ex3ក",
+      "prompt_km": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ",
+      "prompt_en": "Fill in the missing number in the pattern.",
+      "visual": "10 000 ; 20 000 ; 30 000 ; 40 000 ; 50 000 ; … ; 70 000",
+      "options": [
+        "70 000",
+        "50 000",
+        "80 000",
+        "60 000"
+      ],
+      "answer": 3,
+      "explanation_en": "The pattern goes up by 10 000 each time, so the missing number is 60 000.",
+      "tts_text": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ"
+    },
+    {
+      "id": "1-21",
+      "type": "choice",
+      "topic": "sequence",
+      "source": "p1 ex3ខ",
+      "prompt_km": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ",
+      "prompt_en": "Fill in the missing number in the pattern.",
+      "visual": "20 000 ; 40 000 ; … ; 80 000",
+      "options": [
+        "60 000",
+        "80 000",
+        "40 000",
+        "100 000"
+      ],
+      "answer": 0,
+      "explanation_en": "The pattern goes up by 20 000 each time, so the missing number is 60 000.",
+      "tts_text": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ"
+    },
+    {
+      "id": "1-22",
+      "type": "choice",
+      "topic": "sequence",
+      "source": "p1 ex3គ",
+      "prompt_km": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ",
+      "prompt_en": "Fill in the missing number in the pattern.",
+      "visual": "10 000 ; 30 000 ; … ; 70 000 ; 90 000",
+      "options": [
+        "90 000",
+        "50 000",
+        "70 000",
+        "30 000"
+      ],
+      "answer": 1,
+      "explanation_en": "The pattern goes up by 20 000 each time, so the missing number is 50 000.",
+      "tts_text": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ"
+    },
+    {
+      "id": "1-23",
+      "type": "choice",
+      "topic": "sequence",
+      "source": "p1 ex3ឃ",
+      "prompt_km": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ",
+      "prompt_en": "Fill in the missing number in the pattern.",
+      "visual": "10 001 ; 10 003 ; … ; 10 007 ; 10 009",
+      "options": [
+        "10 003",
+        "10 009",
+        "10 005",
+        "10 007"
+      ],
+      "answer": 2,
+      "explanation_en": "The pattern goes up by 2 each time, so the missing number is 10 005.",
+      "tts_text": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ"
+    },
+    {
+      "id": "1-24",
+      "type": "choice",
+      "topic": "sequence",
+      "source": "p1 ex3ឃ",
+      "prompt_km": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ",
+      "prompt_en": "Fill in the missing number in the pattern.",
+      "visual": "10 001 ; 10 003 ; 10 005 ; … ; 10 009",
+      "options": [
+        "10 009",
+        "10 005",
+        "10 011",
+        "10 007"
+      ],
+      "answer": 3,
+      "explanation_en": "The pattern goes up by 2 each time, so the missing number is 10 007.",
+      "tts_text": "ចូរបំពេញចំនួនដែលបាត់តាមលំនាំ"
+    },
+    {
+      "id": "1-25",
+      "type": "choice",
+      "topic": "compare",
+      "source": "p3 example",
+      "prompt_km": "ចូរប្រៀបធៀបចំនួន 68 842 និង 68 799",
+      "prompt_en": "Compare 68 842 and 68 799.",
+      "visual": "68 842  ?  68 799",
+      "options": [
+        ">",
+        "<",
+        "="
+      ],
+      "answer": 0,
+      "explanation_en": "68 842 > 68 799.",
+      "tts_text": "ចូរប្រៀបធៀបចំនួន 68 842 និង 68 799"
+    },
+    {
+      "id": "1-26",
+      "type": "choice",
+      "topic": "compare",
+      "source": "p3 ខ",
+      "prompt_km": "ចូរប្រៀបធៀបចំនួន 98 745 និង 99 443",
+      "prompt_en": "Compare 98 745 and 99 443.",
+      "visual": "98 745  ?  99 443",
+      "options": [
+        "=",
+        "<",
+        ">"
+      ],
+      "answer": 1,
+      "explanation_en": "98 745 < 99 443.",
+      "tts_text": "ចូរប្រៀបធៀបចំនួន 98 745 និង 99 443"
+    },
+    {
+      "id": "1-27",
+      "type": "choice",
+      "topic": "compare",
+      "source": "p3 ខ",
+      "prompt_km": "ចូរប្រៀបធៀបចំនួន 98 745 និង 7 865",
+      "prompt_en": "Compare 98 745 and 7 865.",
+      "visual": "98 745  ?  7 865",
+      "options": [
+        "<",
+        "=",
+        ">"
+      ],
+      "answer": 2,
+      "explanation_en": "98 745 > 7 865.",
+      "tts_text": "ចូរប្រៀបធៀបចំនួន 98 745 និង 7 865"
+    },
+    {
+      "id": "1-28",
+      "type": "choice",
+      "topic": "order",
+      "source": "p3 ខ",
+      "prompt_km": "ចូររៀបចំនួន 98 745 ; 99 443 ; 7 865 តាមលំដាប់ពីតូចទៅធំ",
+      "prompt_en": "Order 98 745 ; 99 443 ; 7 865 from smallest to biggest.",
+      "visual": "98 745  99 443  7 865",
+      "options": [
+        "99 443 ; 98 745 ; 7 865",
+        "98 745 ; 7 865 ; 99 443",
+        "7 865 ; 99 443 ; 98 745",
+        "7 865 ; 98 745 ; 99 443"
+      ],
+      "answer": 3,
+      "explanation_en": "Compare two at a time.",
+      "tts_text": "ចូររៀបចំនួន 98 745 ; 99 443 ; 7 865 តាមលំដាប់ពីតូចទៅធំ"
+    },
+    {
+      "id": "1-29",
+      "type": "choice",
+      "topic": "order",
+      "source": "p3 ខ",
+      "prompt_km": "ចូររៀបចំនួន 98 745 ; 99 443 ; 7 865 តាមលំដាប់ពីធំទៅតូច",
+      "prompt_en": "Order 98 745 ; 99 443 ; 7 865 from biggest to smallest.",
+      "visual": "98 745  99 443  7 865",
+      "options": [
+        "99 443 ; 98 745 ; 7 865",
+        "7 865 ; 98 745 ; 99 443",
+        "98 745 ; 99 443 ; 7 865",
+        "99 443 ; 7 865 ; 98 745"
+      ],
+      "answer": 0,
+      "explanation_en": "Biggest first.",
+      "tts_text": "ចូររៀបចំនួន 98 745 ; 99 443 ; 7 865 តាមលំដាប់ពីធំទៅតូច"
+    },
+    {
+      "id": "1-30",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p5 ក",
+      "prompt_km": "ចូរបង្គត់ចំនួន 37 920 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 37 920 to the nearest thousand.",
+      "visual": "37 920",
+      "options": [
+        "37 000",
+        "38 000",
+        "37 920",
+        "37 900"
+      ],
+      "answer": 1,
+      "explanation_en": "Check the digit 9 (next place to the right): 0–4 round down, 5–9 round up → round up → 38 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 37 920 ត្រឹមខ្ទង់ពាន់"
+    },
+    {
+      "id": "1-31",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p5 ខ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 85 630 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 85 630 to the nearest ten-thousand.",
+      "visual": "85 630",
+      "options": [
+        "85 630",
+        "85 600",
+        "90 000",
+        "86 000"
+      ],
+      "answer": 2,
+      "explanation_en": "Check the digit 5 (next place to the right): 0–4 round down, 5–9 round up → round up → 90 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 85 630 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-32",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1ក",
+      "prompt_km": "ចូរបង្គត់ចំនួន 3 456 ត្រឹមខ្ទង់ដប់",
+      "prompt_en": "Round 3 456 to the nearest ten.",
+      "visual": "3 456",
+      "options": [
+        "3 450",
+        "3 500",
+        "3 000",
+        "3 460"
+      ],
+      "answer": 3,
+      "explanation_en": "Check the digit 6 (next place to the right): 0–4 round down, 5–9 round up → round up → 3 460.",
+      "tts_text": "ចូរបង្គត់ចំនួន 3 456 ត្រឹមខ្ទង់ដប់"
+    },
+    {
+      "id": "1-33",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1ខ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 43 052 ត្រឹមខ្ទង់រយ",
+      "prompt_en": "Round 43 052 to the nearest hundred.",
+      "visual": "43 052",
+      "options": [
+        "43 100",
+        "43 050",
+        "43 000",
+        "40 000"
+      ],
+      "answer": 0,
+      "explanation_en": "Check the digit 5 (next place to the right): 0–4 round down, 5–9 round up → round up → 43 100.",
+      "tts_text": "ចូរបង្គត់ចំនួន 43 052 ត្រឹមខ្ទង់រយ"
+    },
+    {
+      "id": "1-34",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1គ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 65 370 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 65 370 to the nearest thousand.",
+      "visual": "65 370",
+      "options": [
+        "66 000",
+        "65 000",
+        "65 370",
+        "65 400"
+      ],
+      "answer": 1,
+      "explanation_en": "Check the digit 3 (next place to the right): 0–4 round down, 5–9 round up → round down → 65 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 65 370 ត្រឹមខ្ទង់ពាន់"
+    },
+    {
+      "id": "1-35",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1ឃ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 99 756 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 99 756 to the nearest thousand.",
+      "visual": "99 756",
+      "options": [
+        "99 760",
+        "99 000",
+        "100 000",
+        "99 800"
+      ],
+      "answer": 2,
+      "explanation_en": "Check the digit 7 (next place to the right): 0–4 round down, 5–9 round up → round up → 100 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 99 756 ត្រឹមខ្ទង់ពាន់"
+    },
+    {
+      "id": "1-36",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1ង",
+      "prompt_km": "ចូរបង្គត់ចំនួន 82 354 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 82 354 to the nearest thousand.",
+      "visual": "82 354",
+      "options": [
+        "82 350",
+        "82 400",
+        "83 000",
+        "82 000"
+      ],
+      "answer": 3,
+      "explanation_en": "Check the digit 3 (next place to the right): 0–4 round down, 5–9 round up → round down → 82 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 82 354 ត្រឹមខ្ទង់ពាន់"
+    },
+    {
+      "id": "1-37",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1ច",
+      "prompt_km": "ចូរបង្គត់ចំនួន 22 674 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 22 674 to the nearest ten-thousand.",
+      "visual": "22 674",
+      "options": [
+        "20 000",
+        "22 670",
+        "22 700",
+        "23 000"
+      ],
+      "answer": 0,
+      "explanation_en": "Check the digit 2 (next place to the right): 0–4 round down, 5–9 round up → round down → 20 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 22 674 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-38",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1ឆ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 53 490 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 53 490 to the nearest ten-thousand.",
+      "visual": "53 490",
+      "options": [
+        "53 500",
+        "50 000",
+        "53 000",
+        "53 490"
+      ],
+      "answer": 1,
+      "explanation_en": "Check the digit 3 (next place to the right): 0–4 round down, 5–9 round up → round down → 50 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 53 490 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-39",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex1ជ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 86 213 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 86 213 to the nearest ten-thousand.",
+      "visual": "86 213",
+      "options": [
+        "86 200",
+        "86 000",
+        "90 000",
+        "86 210"
+      ],
+      "answer": 2,
+      "explanation_en": "Check the digit 6 (next place to the right): 0–4 round down, 5–9 round up → round up → 90 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 86 213 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-40",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex3ក",
+      "prompt_km": "ចូរបង្គត់ចំនួន 4 567 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 4 567 to the nearest thousand.",
+      "visual": "4 567",
+      "options": [
+        "4 600",
+        "4 570",
+        "4 000",
+        "5 000"
+      ],
+      "answer": 3,
+      "explanation_en": "Check the digit 5 (next place to the right): 0–4 round down, 5–9 round up → round up → 5 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 4 567 ត្រឹមខ្ទង់ពាន់"
+    },
+    {
+      "id": "1-41",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex3ខ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 68 970 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 68 970 to the nearest thousand.",
+      "visual": "68 970",
+      "options": [
+        "69 000",
+        "68 970",
+        "70 000",
+        "68 000"
+      ],
+      "answer": 0,
+      "explanation_en": "Check the digit 9 (next place to the right): 0–4 round down, 5–9 round up → round up → 69 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 68 970 ត្រឹមខ្ទង់ពាន់"
+    },
+    {
+      "id": "1-42",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex3គ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 65 436 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 65 436 to the nearest thousand.",
+      "visual": "65 436",
+      "options": [
+        "66 000",
+        "65 000",
+        "65 400",
+        "65 440"
+      ],
+      "answer": 1,
+      "explanation_en": "Check the digit 4 (next place to the right): 0–4 round down, 5–9 round up → round down → 65 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 65 436 ត្រឹមខ្ទង់ពាន់"
+    },
+    {
+      "id": "1-43",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex4ក",
+      "prompt_km": "ចូរបង្គត់ចំនួន 62 693 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 62 693 to the nearest ten-thousand.",
+      "visual": "62 693",
+      "options": [
+        "62 700",
+        "63 000",
+        "60 000",
+        "62 690"
+      ],
+      "answer": 2,
+      "explanation_en": "Check the digit 2 (next place to the right): 0–4 round down, 5–9 round up → round down → 60 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 62 693 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-44",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex4ខ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 75 934 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 75 934 to the nearest ten-thousand.",
+      "visual": "75 934",
+      "options": [
+        "76 000",
+        "75 930",
+        "75 900",
+        "80 000"
+      ],
+      "answer": 3,
+      "explanation_en": "Check the digit 5 (next place to the right): 0–4 round down, 5–9 round up → round up → 80 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 75 934 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-45",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex4គ",
+      "prompt_km": "ចូរបង្គត់ចំនួន 58 749 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 58 749 to the nearest ten-thousand.",
+      "visual": "58 749",
+      "options": [
+        "60 000",
+        "59 000",
+        "58 750",
+        "58 700"
+      ],
+      "answer": 0,
+      "explanation_en": "Check the digit 8 (next place to the right): 0–4 round down, 5–9 round up → round up → 60 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 58 749 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-46",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex2 table",
+      "prompt_km": "ចូរបង្គត់ចំនួន 34 564 ត្រឹមខ្ទង់រយ",
+      "prompt_en": "Round 34 564 to the nearest hundred.",
+      "visual": "34 564",
+      "options": [
+        "35 000",
+        "34 600",
+        "34 560",
+        "34 500"
+      ],
+      "answer": 1,
+      "explanation_en": "Check the digit 6 (next place to the right): 0–4 round down, 5–9 round up → round up → 34 600.",
+      "tts_text": "ចូរបង្គត់ចំនួន 34 564 ត្រឹមខ្ទង់រយ"
+    },
+    {
+      "id": "1-47",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex2 table",
+      "prompt_km": "ចូរបង្គត់ចំនួន 98 643 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 98 643 to the nearest ten-thousand.",
+      "visual": "98 643",
+      "options": [
+        "98 640",
+        "98 600",
+        "100 000",
+        "99 000"
+      ],
+      "answer": 2,
+      "explanation_en": "Check the digit 8 (next place to the right): 0–4 round down, 5–9 round up → round up → 100 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 98 643 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-48",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex2 table",
+      "prompt_km": "ចូរបង្គត់ចំនួន 16 780 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 16 780 to the nearest ten-thousand.",
+      "visual": "16 780",
+      "options": [
+        "17 000",
+        "16 800",
+        "16 780",
+        "20 000"
+      ],
+      "answer": 3,
+      "explanation_en": "Check the digit 6 (next place to the right): 0–4 round down, 5–9 round up → round up → 20 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 16 780 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-49",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex2 table",
+      "prompt_km": "ចូរបង្គត់ចំនួន 96 678 ត្រឹមខ្ទង់ម៉ឺន",
+      "prompt_en": "Round 96 678 to the nearest ten-thousand.",
+      "visual": "96 678",
+      "options": [
+        "100 000",
+        "97 000",
+        "96 700",
+        "96 680"
+      ],
+      "answer": 0,
+      "explanation_en": "Check the digit 6 (next place to the right): 0–4 round down, 5–9 round up → round up → 100 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 96 678 ត្រឹមខ្ទង់ម៉ឺន"
+    },
+    {
+      "id": "1-50",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex2 table",
+      "prompt_km": "ចូរបង្គត់ចំនួន 78 045 ត្រឹមខ្ទង់ដប់",
+      "prompt_en": "Round 78 045 to the nearest ten.",
+      "visual": "78 045",
+      "options": [
+        "80 000",
+        "78 050",
+        "78 040",
+        "78 000"
+      ],
+      "answer": 1,
+      "explanation_en": "Check the digit 5 (next place to the right): 0–4 round down, 5–9 round up → round up → 78 050.",
+      "tts_text": "ចូរបង្គត់ចំនួន 78 045 ត្រឹមខ្ទង់ដប់"
+    },
+    {
+      "id": "1-51",
+      "type": "choice",
+      "topic": "rounding",
+      "source": "p6 ex2 table",
+      "prompt_km": "ចូរបង្គត់ចំនួន 81 606 ត្រឹមខ្ទង់ពាន់",
+      "prompt_en": "Round 81 606 to the nearest thousand.",
+      "visual": "81 606",
+      "options": [
+        "81 600",
+        "81 000",
+        "82 000",
+        "81 610"
+      ],
+      "answer": 2,
+      "explanation_en": "Check the digit 6 (next place to the right): 0–4 round down, 5–9 round up → round up → 82 000.",
+      "tts_text": "ចូរបង្គត់ចំនួន 81 606 ត្រឹមខ្ទង់ពាន់"
+    }
+  ],
+  "description_en": "Learn to read, write, compare, order and round numbers up to 100 000.",
+  "subject_en": "Khmer Mathematics",
+  "sections": [
+    {
+      "id": "s1",
+      "title_km": "ចំនួនដល់ 100 000",
+      "title_en": "Reading Numbers & Patterns",
+      "topics": [
+        "read_number",
+        "sequence"
+      ],
+      "note_page": 1
+    },
+    {
+      "id": "s2",
+      "title_km": "ខ្ទង់និងតម្លៃខ្ទង់",
+      "title_en": "Place Value & Expanded Form",
+      "topics": [
+        "place_value",
+        "expanded_form"
+      ],
+      "note_page": 2
+    },
+    {
+      "id": "s3",
+      "title_km": "ការប្រៀបធៀបនិងរៀបលំដាប់ចំនួន",
+      "title_en": "Compare & Order Numbers",
+      "topics": [
+        "compare",
+        "order"
+      ],
+      "note_page": 3
+    },
+    {
+      "id": "s4",
+      "title_km": "ការបង្គត់ចំនួន",
+      "title_en": "Rounding Numbers",
+      "topics": [
+        "rounding"
+      ],
+      "note_page": 5
+    }
+  ]
+}

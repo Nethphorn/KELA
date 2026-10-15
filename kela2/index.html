@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KELA – Daily Learning Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Noto+Sans+Khmer:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <h1>KELA</h1>
+    <p>Daily Learning Assistant</p>
+  </div>
+  <div class="top-actions">
+    <span class="pill coins">🪙 <b id="coins">1,250</b></span>
+    <span class="pill streak">🔥 7d streak</span>
+    <button class="icon-btn" aria-label="Notifications">🔔</button>
+    <button class="icon-btn" aria-label="Settings">⚙️</button>
+    <div class="avatar" aria-label="Profile">🦊<span class="lvl">4</span></div>
+  </div>
+</header>
+
+<main class="layout" id="dashView">
+  <section class="card quests">
+    <div class="card-head">
+      <h2>Today's Quests &amp; Worlds</h2>
+      <span class="chip chip-green">3 Active</span>
+    </div>
+    <div id="lessonList" class="lesson-list"></div>
+  </section>
+
+  <aside class="side">
+    <section class="card pets">
+      <div class="card-head">
+        <h3>My Math Pets 🐾</h3>
+        <span class="chip chip-blue">2 Active</span>
+      </div>
+      <div class="pet-row">
+        <div class="pet-img">🐉<span class="lvl">4</span></div>
+        <div>
+          <span class="chip chip-mint small">Equipped ✨</span>
+          <div class="pet-name">Lv. 4 Math Dragon</div>
+        </div>
+      </div>
+      <div class="boost">⚡ Companion Boost: +10%</div>
+      <button class="btn-primary" id="sanctuaryBtn">Visit Pet Sanctuary 🏰</button>
+    </section>
+
+    <section class="card upnext">
+      <div class="eyebrow">UP NEXT</div>
+      <div class="next-item">
+        <div class="next-icon">⚡</div>
+        <div>
+          <b>Speed Math Blast</b>
+          <div class="muted">60s Challenge • 2:00 PM</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card sparky">
+      <div class="sparky-top">
+        <div class="pet-img">🐲<span class="lvl">4</span></div>
+        <div>
+          <b>Sparky the Dragon ✧</b>
+          <div class="muted blue">Level 4 Math Companion</div>
+        </div>
+      </div>
+      <div class="xp-label"><span>XP Progress</span><b id="xpText">340 / 500 XP</b></div>
+      <div class="bar"><div class="fill xp" id="xpFill"></div></div>
+    </section>
+  </aside>
+</main>
+
+<!-- Course page (opens when a lesson card is clicked) -->
+<main id="courseView" class="course" hidden>
+  <section class="hero">
+    <button class="back" id="courseBack">← Back to quests</button>
+    <div class="hero-in">
+      <div class="eyebrow light" id="cSubject"></div>
+      <h2 id="cTitleKm"></h2>
+      <div class="hero-en" id="cTitleEn"></div>
+      <p id="cDesc"></p>
+      <div class="meta" id="cMeta"></div>
+    </div>
+  </section>
+  <div class="course-body">
+    <section class="card progress-card">
+      <div class="eyebrow">YOUR PROGRESS</div>
+      <div class="pc-row"><b id="cPct">0% Complete</b><span class="muted" id="cCount"></span></div>
+      <div class="bar big"><div class="fill" id="cBar"></div></div>
+      <button class="btn-primary" id="cContinue">Start learning ▶</button>
+    </section>
+    <section class="card lessons-card">
+      <h3>Lessons</h3>
+      <div id="sectionList" class="sections"></div>
+      <button class="practice" id="practiceAll">🎲 <span><b>Mixed practice</b><small id="practiceSub"></small></span><i>Start ➜</i></button>
+    </section>
+  </div>
+</main>
+
+<!-- Lesson player -->
+<div id="player" class="overlay" hidden>
+  <div class="player-card" role="dialog" aria-modal="true" aria-labelledby="pTitle">
+    <div class="player-head">
+      <div>
+        <div class="eyebrow" id="pUnit"></div>
+        <h2 id="pTitle"></h2>
+      </div>
+      <button class="icon-btn" id="closeBtn" aria-label="Close">✕</button>
+    </div>
+
+    <div id="quizView">
+      <div class="progress-row">
+        <span id="qCounter">Question 1 / 5</span>
+        <span id="liveScore">Score: 0</span>
+      </div>
+      <div class="bar"><div class="fill" id="qBar"></div></div>
+
+      <div class="question">
+        <div class="visual" id="qVisual"></div>
+        <h3 id="qKm"></h3>
+        <p class="muted" id="qEn"></p>
+      </div>
+
+      <div class="voice-row">
+        <button class="voice-btn" id="ttsBtn">🔊 Listen <small>(TTS)</small></button>
+        <button class="voice-btn" id="asrBtn">🎤 Speak answer <small>(ASR)</small></button>
+        <span class="voice-status" id="voiceStatus" aria-live="polite"></span>
+      </div>
+
+      <div class="options" id="options"></div>
+
+      <div class="feedback" id="feedback" hidden></div>
+      <button class="btn-primary" id="nextBtn" hidden>Next ➜</button>
+    </div>
+
+    <div id="resultView" hidden>
+      <div class="result">
+        <div class="big-emoji" id="rEmoji">🎉</div>
+        <h3 id="rTitle">Finished!</h3>
+        <div class="score-circle"><b id="rScore">0</b><span id="rTotal">/ 5</span></div>
+        <p id="rMsg" class="muted"></p>
+        <div class="reward" id="rReward"></div>
+        <div class="result-actions">
+          <button class="btn-primary" id="againBtn">Play again 🔁</button>
+          <button class="btn-ghost" id="homeBtn">Back to course</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
