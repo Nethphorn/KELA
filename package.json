@@ -19,6 +19,7 @@
     "ci": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test:unit && pnpm run build && pnpm run test:e2e",
     "prepare": "lefthook install # 🐾 Setting up Lefthook",
     "watch": "echo '👀 Watching files...' && jest --watch",
+    "data:build": "node scripts/csvToLesson.mjs scripts/lesson_2.csv scripts/lesson_2.meta.json src/data/lessons/lesson_2.json && prettier --write src/data/lessons/lesson_2.json",
     "clean": "echo '🧽 Cleaning up...' && rm -rf ./node_modules ./dist && rm -f package-lock.json pnpm-lock.yaml",
     "docker-clean": "echo '🧹 Cleaning up Docker resources...' && docker stop $(docker ps -aq) && docker rm $(docker ps -aq) && docker image prune -af && docker volume prune -f && docker network prune -f && docker builder prune -f"
   },

@@ -164,6 +164,7 @@ export default [
       'public/',
       'playwright-report/',
       'test-results/',
+      'scripts/',
       '*.md',
       '.vscode/',
     ],

@@ -58,7 +58,7 @@ export function GradeScreen() {
   const navigate = useNavigate()
 
   const openLesson = () => {
-    void navigate('/lesson/4')
+    void navigate('/lesson/2')
   }
 
   return (

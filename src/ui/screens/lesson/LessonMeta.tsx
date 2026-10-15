@@ -57,13 +57,17 @@ function LessonTitleRow() {
   )
 }
 
-export function LessonMeta() {
-  const { progress } = LESSON_CONTENT
+interface LessonMetaProps {
+  readonly progress?: number
+}
+
+export function LessonMeta({ progress }: LessonMetaProps) {
+  const value = progress ?? LESSON_CONTENT.progress
 
   return (
     <div className="flex w-full flex-col gap-space-sm pb-space-md pt-space-sm">
       <LessonTitleRow />
-      <ProgressMeter value={progress} />
+      <ProgressMeter value={value} />
       <StepIndicators />
     </div>
   )
