@@ -5,6 +5,7 @@ interface TutorCardProps {
   readonly speechKm: string
   readonly speechEn: string
   readonly onHint: () => void
+  readonly onReadAloud?: () => void
 }
 
 function TutorAvatar() {
@@ -38,7 +39,12 @@ function SpeechBox({ speechKm, speechEn }: SpeechBoxProps) {
   )
 }
 
-function TutorActions({ onHint }: { readonly onHint: () => void }) {
+interface TutorActionsProps {
+  readonly onHint: () => void
+  readonly onReadAloud?: () => void
+}
+
+function TutorActions({ onHint, onReadAloud }: TutorActionsProps) {
   return (
     <div className="flex items-center gap-space-xs pt-1">
       <button
@@ -51,6 +57,7 @@ function TutorActions({ onHint }: { readonly onHint: () => void }) {
       </button>
       <button
         className="flex flex-1 items-center justify-center gap-1 rounded-full bg-primary-fixed px-3 py-2 text-title-sm text-on-primary-fixed transition-all hover:bg-primary-fixed-dim active:scale-95"
+        onClick={onReadAloud}
         type="button"
       >
         <MaterialIcon className="text-[18px] text-primary" name="volume_up" />
@@ -60,7 +67,12 @@ function TutorActions({ onHint }: { readonly onHint: () => void }) {
   )
 }
 
-export function TutorCard({ speechKm, speechEn, onHint }: TutorCardProps) {
+export function TutorCard({
+  speechKm,
+  speechEn,
+  onHint,
+  onReadAloud,
+}: TutorCardProps) {
   const { tutor } = LESSON_CONTENT
 
   return (
@@ -79,7 +91,7 @@ export function TutorCard({ speechKm, speechEn, onHint }: TutorCardProps) {
           <SpeechBox speechEn={speechEn} speechKm={speechKm} />
         </div>
       </div>
-      <TutorActions onHint={onHint} />
+      <TutorActions onHint={onHint} onReadAloud={onReadAloud} />
     </div>
   )
 }
