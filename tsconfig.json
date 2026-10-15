@@ -28,5 +28,5 @@
     "*.config.cjs",
     "*.config.ts"
   ],
-  "exclude": ["eslint.config.ts"]
+  "exclude": ["eslint.config.ts", "vite.config.ts", "src/web/**/*"]
 }

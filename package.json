@@ -4,9 +4,12 @@
   "description": "React template with TypeScript, ESLint, Prettier, Jest, Lefthook, Playwright, and TailwindCSS",
   "packageManager": "pnpm@11.3.0",
   "scripts": {
+    "dev": "vite",
+    "web:build": "vite build",
+    "web:preview": "vite preview",
     "start": "echo '🚀 Starting the app... Please wait.' && pnpm run build && echo '✅ Build complete. Launching the app...' && node dist/src/server.js",
     "build": "echo '🔨 Building the app...' && tsc",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.react.json",
     "test": "echo '🧪 Running tests...' && jest --config jest.config.cjs --coverage",
     "test:unit": "jest --config jest.config.cjs --coverage",
     "test:e2e": "playwright test",
@@ -27,6 +30,7 @@
     "@eslint/js": "^9.39.2",
     "@jest/globals": "^30.5.1",
     "@playwright/test": "^1.63.0",
+    "@tailwindcss/vite": "^4.1.14",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@types/express": "^5.0.6",
@@ -38,6 +42,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@typescript-eslint/eslint-plugin": "^8.60.0",
     "@typescript-eslint/parser": "^8.60.0",
+    "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.39.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
@@ -55,7 +60,8 @@
     "readline-sync": "^1.4.10",
     "ts-jest": "^29.4.11",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.0"
+    "typescript-eslint": "^8.60.0",
+    "vite": "^6.4.4"
   },
   "dependencies": {
     "autoprefixer": "^10.5.0",

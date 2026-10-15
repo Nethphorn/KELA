@@ -1,0 +1,53 @@
+@import 'tailwindcss';
+
+/*
+ * KELA theme tokens. The UI is a fixed square meant to be embedded in a
+ * robot display, so we define the palette and fonts used across the app.
+ */
+@theme {
+  --font-sans: 'Nunito', 'Noto Sans Khmer', system-ui, sans-serif;
+  --font-khmer: 'Noto Sans Khmer', 'Nunito', sans-serif;
+
+  --color-cream: #faf5ec;
+  --color-ink: #1f2937;
+
+  --color-brand-blue: #3b5bdb;
+  --color-brand-blue-soft: #e8edff;
+
+  --color-quest-green: #0f9d58;
+  --color-quest-green-soft: #d7f3e3;
+  --color-quest-blue: #3b82f6;
+  --color-quest-blue-soft: #dbe8ff;
+  --color-quest-orange: #f59e0b;
+  --color-quest-orange-soft: #fde6cf;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #efe9df;
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Khmer script typically renders better with its dedicated font. */
+.font-khmer {
+  font-family: var(--font-khmer);
+}
+
+/* Hide scrollbars inside the embedded panels while keeping scroll working. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
