@@ -1,0 +1,815 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100vw;
+          margin: 0;
+          padding: 0;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+          overscroll-behavior: none;
+          background-color: #faf8ff;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'secondary-fixed': '#ffd9e4',
+              outline: '#6f787d',
+              'on-surface-variant': '#3f484c',
+              'inverse-on-surface': '#eef0ff',
+              'primary-fixed': '#b9eaff',
+              'surface-container': '#eaedff',
+              'primary-container': '#0e7490',
+              'on-tertiary': '#ffffff',
+              secondary: '#b4136d',
+              'on-secondary-fixed': '#3e0022',
+              'primary-fixed-dim': '#81d1f0',
+              'surface-variant': '#dae2fd',
+              'surface-tint': '#006781',
+              tertiary: '#764900',
+              error: '#ba1a1a',
+              'on-primary-fixed-variant': '#004d62',
+              'surface-container-lowest': '#ffffff',
+              'on-tertiary-container': '#ffe9d4',
+              'on-error-container': '#93000a',
+              'surface-container-high': '#e2e7ff',
+              'tertiary-fixed-dim': '#ffb95f',
+              'surface-dim': '#d2d9f4',
+              'inverse-primary': '#81d1f0',
+              background: '#faf8ff',
+              'error-container': '#ffdad6',
+              'tertiary-container': '#965f00',
+              'surface-container-low': '#f2f3ff',
+              surface: '#faf8ff',
+              'on-tertiary-fixed-variant': '#653e00',
+              'on-primary-container': '#d3f1ff',
+              'on-secondary-fixed-variant': '#8c0053',
+              'on-surface': '#131b2e',
+              'tertiary-fixed': '#ffddb8',
+              'secondary-fixed-dim': '#ffb0cd',
+              'on-error': '#ffffff',
+              'outline-variant': '#bec8cd',
+              'on-secondary': '#ffffff',
+              'secondary-container': '#fd56a7',
+              'on-primary': '#ffffff',
+              'on-tertiary-fixed': '#2a1700',
+              'inverse-surface': '#283044',
+              'on-primary-fixed': '#001f29',
+              'on-secondary-container': '#600037',
+              primary: '#005a71',
+              'on-background': '#131b2e',
+              'surface-container-highest': '#dae2fd',
+              'surface-bright': '#faf8ff',
+            },
+            borderRadius: {
+              DEFAULT: '1rem',
+              lg: '2rem',
+              xl: '3rem',
+              full: '9999px',
+            },
+            spacing: {
+              'space-lg': '1.25rem',
+              'space-xs': '0.25rem',
+              'space-xl': '2rem',
+              gutter: '1rem',
+              'space-sm': '0.5rem',
+              'gutter-mobile': '0.75rem',
+              margin: '1.5rem',
+              'margin-mobile': '1rem',
+              'space-md': '0.875rem',
+            },
+            fontFamily: {
+              'headline-lg': ['Plus Jakarta Sans'],
+              'title-sm': ['Plus Jakarta Sans'],
+              'body-sm': ['Plus Jakarta Sans'],
+              'body-lg': ['Plus Jakarta Sans'],
+              'headline-lg-mobile': ['Plus Jakarta Sans'],
+              'label-badge': ['Plus Jakarta Sans'],
+              'headline-md': ['Plus Jakarta Sans'],
+              'display-hero-mobile': ['Plus Jakarta Sans'],
+              'math-display': ['Plus Jakarta Sans'],
+              'body-md': ['Plus Jakarta Sans'],
+              'display-hero': ['Plus Jakarta Sans'],
+            },
+            fontSize: {
+              'headline-lg': [
+                '24px',
+                { lineHeight: '32px', fontWeight: '700' },
+              ],
+              'title-sm': ['15px', { lineHeight: '22px', fontWeight: '600' }],
+              'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }],
+              'body-lg': ['16px', { lineHeight: '24px', fontWeight: '500' }],
+              'headline-lg-mobile': [
+                '20px',
+                { lineHeight: '28px', fontWeight: '700' },
+              ],
+              'label-badge': [
+                '11px',
+                { lineHeight: '14px', fontWeight: '700' },
+              ],
+              'headline-md': [
+                '18px',
+                { lineHeight: '26px', fontWeight: '700' },
+              ],
+              'display-hero-mobile': [
+                '26px',
+                { lineHeight: '34px', fontWeight: '800' },
+              ],
+              'math-display': [
+                '28px',
+                { lineHeight: '36px', fontWeight: '700' },
+              ],
+              'body-md': ['14px', { lineHeight: '20px', fontWeight: '500' }],
+              'display-hero': [
+                '32px',
+                { lineHeight: '40px', fontWeight: '800' },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface flex flex-col min-h-screen">
+    <header
+      class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_2px_12px_rgba(19,27,46,0.03)]"
+    >
+      <div
+        class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"
+      >
+        <div class="flex items-center gap-space-xs">
+          <img
+            alt="KELA Math Mascot Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_CTJ6NKYSsqc-Z1EOe0_XdezPgJU_HuVqwR4nJcUzTwsX5t4RA5C6taR5K-2yL_-DHRQmYAMjoQV-OdUCUsgokUZBBlRmQHbA1aZmDiFIo85peLZ0qvmPOc_aO2VcAe4bmfrW-ntjgz__Q1Qpev9CRkc0WtRpmm3WpgHOg8Vbih2zczgpXCOcv6mQHnyi3ywD0O7AGHww2m03fH_iKKJxatNXdLeQnCpx5tYUqJGBaePjR6HHyic"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-headline-md text-headline-md text-primary leading-none"
+              >KELA Kids</span
+            ><span
+              class="font-label-badge text-label-badge text-on-surface-variant leading-none mt-0.5"
+              >Subjects</span
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs overflow-x-auto py-1">
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">🪙</span
+            ><span
+              class="font-label-badge text-label-badge text-tertiary font-bold"
+              >1,250</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">⭐</span
+            ><span
+              class="font-label-badge text-label-badge text-tertiary-container font-bold"
+              >350</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">🔥</span
+            ><span
+              class="font-label-badge text-label-badge text-secondary font-bold"
+              >7d</span
+            >
+          </div>
+        </div>
+        <div class="relative flex-shrink-0">
+          <div class="p-0.5 rounded-full bg-surface-container-high">
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQ1r6ZGmJdyfhIyihGofoVbcAqd1nHhCcLd5BnTh3JU0zPfaeJjkAz8z3_XoFF0wfs_FAlnDStQktjUPXnvSnV5edXGjPyP-G29Cr0qIXP_7u5a5_Da565h-2DvYqpmuX_FW3ZJ-H3ZfLA5layiOlg-9wzutnXR3uxZnskRpUJVJmE_CgR_jWZ1eIxTs8eCid1qJC2immH5ewXVolSK1JvObviVktJMB1a-r5r44oXXs-3yKhJ_XY"
+            />
+          </div>
+          <span
+            class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary font-label-badge text-[9px] px-1 py-0.2 rounded-full font-bold shadow-[0_2px_4px_rgba(180,19,109,0.25)]"
+            >Lv.4</span
+          >
+        </div>
+      </div>
+    </header>
+    <main
+      class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"
+    >
+      <div class="flex flex-col w-full">
+        <div class="px-margin-mobile flex flex-col gap-space-md pt-2 pb-6">
+          <!-- Search & Voice Input Box -->
+          <div class="relative w-full">
+            <div
+              class="flex items-center gap-space-xs bg-surface-container-lowest px-4 py-3 rounded-full shadow-[0_2px_12px_rgba(19,27,46,0.05)]"
+            >
+              <span class="material-symbols-outlined text-outline text-[22px]"
+                >search</span
+              >
+              <input
+                class="w-full bg-transparent font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none"
+                id="subject-search-input"
+                placeholder="ស្វែងរកមុខវិជ្ជា... Search subjects, topics..."
+                type="text"
+              />
+              <button
+                aria-label="Voice Search"
+                class="flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-high text-primary hover:bg-primary-fixed transition-all"
+                id="mic-button"
+                type="button"
+              >
+                <span class="material-symbols-outlined text-[18px]">mic</span>
+              </button>
+            </div>
+          </div>
+          <!-- Dual Language Toggle Pill & Greeting Subheader -->
+          <div class="flex items-center justify-between mt-1">
+            <div class="flex flex-col">
+              <div class="flex items-center gap-1.5">
+                <span class="text-base">🎒</span>
+                <span
+                  class="font-headline-md text-headline-md text-on-surface tracking-tight"
+                  >មុខវិជ្ជាសាលា • Subjects</span
+                >
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Choose your learning world to collect stars &amp; badges!
+              </p>
+            </div>
+            <div
+              class="flex items-center bg-surface-container-high p-1 rounded-full text-center"
+            >
+              <span
+                class="font-label-badge text-label-badge bg-primary text-on-primary px-2.5 py-1 rounded-full shadow-sm"
+                >KH</span
+              >
+              <span
+                class="font-label-badge text-label-badge text-on-surface-variant px-2 py-1"
+                >EN</span
+              >
+            </div>
+          </div>
+          <!-- Visual Mascot AI Coach Bubble -->
+          <div
+            class="relative overflow-hidden bg-surface-container-low rounded-2xl p-space-md shadow-sm"
+          >
+            <div class="flex items-start gap-3">
+              <div class="relative shrink-0">
+                <div
+                  class="w-12 h-12 rounded-full overflow-hidden bg-primary-fixed shadow-inner flex items-center justify-center"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Cute 3D animated lion math tutor wearing round reading glasses and a colorful scout neckerchief, friendly smiling expression with high quality Pixar cartoon rendered lighting, on warm pastel cyan studio background."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwTUYhRND-PtG1uQ9sDJ4bni3nKz7P7yLY2AjUzQd_yENO1q0fbKX9Lc4r5Mv0nY8iwMJzgBcvVx73Sh3ACUWvEmOpzT5iVvunPiImzJEp9wV6oNmlFQCgOE45yOXesx45ZyyhAY7FVkNj1aoO20R7QWN3kyql8m2kgff7Ph3UAJ6-sb0j0FQW5RsxDjG0EY9m-toBwkYXHg86afKzq0xp0Zjixjnbf8lT00NjyH8QDM6kmD08hJVF"
+                  />
+                </div>
+                <span
+                  class="absolute -bottom-1 -right-0.5 w-4 h-4 bg-primary text-on-primary text-[10px] rounded-full flex items-center justify-center"
+                  >✨</span
+                >
+              </div>
+              <div class="flex flex-col min-w-0 flex-1">
+                <div class="flex items-center gap-1">
+                  <span
+                    class="font-title-sm text-title-sm text-primary font-bold"
+                    >លោកគ្រូ KELA AI</span
+                  >
+                  <span
+                    class="font-label-badge text-[10px] bg-tertiary-fixed text-tertiary font-bold px-1.5 py-0.5 rounded-full"
+                    >Guide</span
+                  >
+                </div>
+                <p
+                  class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug"
+                >
+                  «សួស្តីតូចៗ! តោះរៀនគណិតវិទ្យាថ្ងៃនេះ ដើម្បីទទួលបានមេដាយថ្មី!»
+                  Ready to explore Grade 2 Math?
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Subject Cards Container -->
+          <div class="flex flex-col gap-space-md mt-1">
+            <!-- 1. FEATURED: Mathematics Card (Interactive & Playable) -->
+            <div
+              class="group relative overflow-hidden bg-surface-container-lowest rounded-2xl p-space-lg shadow-[0_8px_24px_rgba(0,90,113,0.08)] cursor-pointer transition-all duration-150 active:translate-y-1 hover:shadow-lg"
+              id="math-card"
+              role="button"
+              tabindex="0"
+            >
+              <!-- Ambient decorative corner glow -->
+              <div
+                class="absolute -top-12 -right-12 w-32 h-32 bg-primary-fixed/40 rounded-full blur-2xl pointer-events-none"
+              ></div>
+              <div class="flex items-start justify-between gap-2 relative z-10">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center shadow-inner shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[32px]"
+                      >calculate</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="font-headline-md text-headline-md text-on-surface"
+                        >គណិតវិទ្យា</span
+                      >
+                      <span
+                        class="font-label-badge text-label-badge bg-secondary-fixed text-secondary px-2 py-0.5 rounded-full font-bold"
+                        >Grade 1-6</span
+                      >
+                    </div>
+                    <span
+                      class="font-title-sm text-title-sm text-primary font-semibold"
+                      >Mathematics World</span
+                    >
+                  </div>
+                </div>
+                <!-- Live badge -->
+                <div
+                  class="flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full"
+                >
+                  <span
+                    class="w-2 h-2 rounded-full bg-primary animate-pulse"
+                  ></span>
+                  <span
+                    class="font-label-badge text-label-badge text-primary font-bold uppercase"
+                    >Ready</span
+                  >
+                </div>
+              </div>
+              <!-- Visual Mini Graphic Strip -->
+              <div
+                class="mt-4 flex items-center gap-2 bg-surface-container-low p-2.5 rounded-xl"
+              >
+                <div class="w-10 h-10 rounded-lg overflow-hidden shrink-0">
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="Chunky colorful 3D math blocks showing plus, minus, and multiplication symbols arranged playfully on bright wooden tabletop, gentle soft lighting, high fidelity 3D toy aesthetic."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzpBs3_I7KfI8xGY_07KY7sTklevLh8uDVQCb6k6GRGjPPg4e2MdcEEEonOuHiwNJP94GdZAUgMYQJUH24rTrLdTSxddcsGee6n2UTYiD8V0AUR8116I_pIpbmvNaln2APF-P05zHcaFDpvzdTQ_NMTWTt54MppFmrN20ptEl9a1OWGN4Zcr3F3Z7BRUrAhqMyfWE_uhWDQGjHFgXrCJ1nVmo5VWYryoI8G_Sc-Vm-iC93zB2g692c"
+                  />
+                </div>
+                <div class="flex flex-col flex-1 min-w-0">
+                  <div
+                    class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm"
+                  >
+                    <span>សកម្មភាព (6 Grades • 48 Units)</span>
+                    <span class="font-bold text-primary">80% បានរៀន</span>
+                  </div>
+                  <!-- Progress Bar -->
+                  <div
+                    class="w-full bg-surface-container-high h-2.5 rounded-full mt-1 overflow-hidden"
+                  >
+                    <div
+                      class="bg-primary h-full rounded-full transition-all duration-500"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Topics Quick Pills -->
+              <div class="flex items-center gap-1.5 flex-wrap mt-3">
+                <span
+                  class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-2 py-1 rounded-full"
+                  >➕ បូកលេខ Addition</span
+                >
+                <span
+                  class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-2 py-1 rounded-full"
+                  >➖ ដកលេខ Subtraction</span
+                >
+                <span
+                  class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-2 py-1 rounded-full"
+                  >✖️ គុណ Multiplication</span
+                >
+                <span
+                  class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-2 py-1 rounded-full"
+                  >🔷 រូបធរណីមាត្រ</span
+                >
+              </div>
+              <!-- Chunky Action Button -->
+              <div class="mt-4 flex items-center justify-between pt-1">
+                <div class="flex items-center gap-1 text-tertiary">
+                  <span class="text-sm">⭐</span>
+                  <span class="font-label-badge text-label-badge font-bold"
+                    >+120 Points Ready</span
+                  >
+                </div>
+                <button
+                  class="flex items-center gap-1.5 bg-primary text-on-primary px-4 py-2 rounded-full font-title-sm text-title-sm font-bold shadow-[0_4px_0_0_#004d62] active:shadow-[0_1px_0_0_#004d62] active:translate-y-1 transition-all"
+                  type="button"
+                >
+                  <span>ចូលរៀន Math</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+            </div>
+            <!-- 2. LOCKED: Khmer Language (ភាសាខ្មែរ) -->
+            <div
+              class="relative bg-surface-container-lowest/80 rounded-2xl p-space-md shadow-sm opacity-90 overflow-hidden"
+            >
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-secondary-fixed/50 flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary text-[26px]"
+                      >menu_book</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="font-headline-md text-headline-md text-on-surface"
+                        >ភាសាខ្មែរ</span
+                      >
+                      <span
+                        class="font-label-badge text-label-badge bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full font-bold"
+                        >មកដល់ឆាប់ៗ</span
+                      >
+                    </div>
+                    <span
+                      class="font-body-md text-body-md text-on-surface-variant"
+                      >Khmer Literacy &amp; Reading</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >lock</span
+                  >
+                </div>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                ស្គាល់តួអក្សរ ស្រៈ ព្យញ្ជនៈ និងការអានរឿងនិទានសប្បាយៗ។ Fun
+                character stories &amp; handwriting traces.
+              </p>
+              <div class="mt-3 flex items-center justify-between pt-2">
+                <span class="font-label-badge text-label-badge text-outline"
+                  >Unlock at Level 5 • Coming in Term 2</span
+                >
+                <button
+                  class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-bold active:scale-95 transition-all"
+                  onclick="showNotifyToast('ភាសាខ្មែរ (Khmer Language)')"
+                  type="button"
+                >
+                  Notify Me 🔔
+                </button>
+              </div>
+            </div>
+            <!-- 3. LOCKED: Science & Nature (វិទ្យាសាស្ត្រ) -->
+            <div
+              class="relative bg-surface-container-lowest/80 rounded-2xl p-space-md shadow-sm opacity-90 overflow-hidden"
+            >
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-tertiary-fixed/50 flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-tertiary text-[26px]"
+                      >biotech</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="font-headline-md text-headline-md text-on-surface"
+                        >វិទ្យាសាស្ត្រ</span
+                      >
+                      <span
+                        class="font-label-badge text-label-badge bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full font-bold"
+                        >មកដល់ឆាប់ៗ</span
+                      >
+                    </div>
+                    <span
+                      class="font-body-md text-body-md text-on-surface-variant"
+                      >Science &amp; Discovery</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >lock</span
+                  >
+                </div>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                ស្វែងយល់ពីធម្មជាតិ ភពផែនដី សត្វ និងការពិសោធន៍តូចៗ! Interactive
+                solar system &amp; ecosystem mini-labs.
+              </p>
+              <div class="mt-3 flex items-center justify-between pt-2">
+                <span class="font-label-badge text-label-badge text-outline"
+                  >32 Interactive Experiments</span
+                >
+                <button
+                  class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-bold active:scale-95 transition-all"
+                  onclick="showNotifyToast('វិទ្យាសាស្ត្រ (Science)')"
+                  type="button"
+                >
+                  Notify Me 🔔
+                </button>
+              </div>
+            </div>
+            <!-- 4. LOCKED: English for Kids (ភាសាអង់គ្លេស) -->
+            <div
+              class="relative bg-surface-container-lowest/80 rounded-2xl p-space-md shadow-sm opacity-90 overflow-hidden"
+            >
+              <div class="flex items-start justify-between">
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-12 h-12 rounded-2xl bg-surface-variant flex items-center justify-center shrink-0"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-[26px]"
+                      >spellcheck</span
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <div class="flex items-center gap-2">
+                      <span
+                        class="font-headline-md text-headline-md text-on-surface"
+                        >ភាសាអង់គ្លេស</span
+                      >
+                      <span
+                        class="font-label-badge text-label-badge bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full font-bold"
+                        >មកដល់ឆាប់ៗ</span
+                      >
+                    </div>
+                    <span
+                      class="font-body-md text-body-md text-on-surface-variant"
+                      >English for Young Explorers</span
+                    >
+                  </div>
+                </div>
+                <div
+                  class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-outline"
+                >
+                  <span class="material-symbols-outlined text-[18px]"
+                    >lock</span
+                  >
+                </div>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">
+                រៀនពាក្យគន្លឹះ បញ្ចេញសំឡេង Phonics និងល្បែងសន្ទនាឆ្លាតវៃ។
+                Vocabulary builder with voice phonics game.
+              </p>
+              <div class="mt-3 flex items-center justify-between pt-2">
+                <span class="font-label-badge text-label-badge text-outline"
+                  >Phonics &amp; Oxford Kids Curriculum</span
+                >
+                <button
+                  class="font-label-badge text-label-badge bg-surface-container-high text-on-surface px-3 py-1.5 rounded-full font-bold active:scale-95 transition-all"
+                  onclick="showNotifyToast('ភាសាអង់គ្លេស (English)')"
+                  type="button"
+                >
+                  Notify Me 🔔
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Daily Recommendation Banner -->
+          <div
+            class="mt-2 bg-primary-container text-on-primary-container rounded-2xl p-space-md shadow-md flex items-center justify-between gap-3"
+          >
+            <div class="flex items-center gap-3 min-w-0">
+              <div
+                class="w-11 h-11 rounded-xl bg-surface-container-lowest/20 flex items-center justify-center text-white shrink-0"
+              >
+                <span class="material-symbols-outlined text-[24px]"
+                  >school</span
+                >
+              </div>
+              <div class="flex flex-col min-w-0">
+                <span
+                  class="font-label-badge text-[10px] uppercase font-bold text-on-primary-container/80 tracking-wider"
+                  >ការណែនាំប្រចាំថ្ងៃ • Daily Pick</span
+                >
+                <span
+                  class="font-title-sm text-title-sm text-white font-bold truncate"
+                  >ការបូកមានត្រាទុក (Regrouping 2-digit)</span
+                >
+                <span
+                  class="font-body-sm text-body-sm text-on-primary-container/90"
+                  >Lesson 4 of 5 • Unit 2 (Grade 2)</span
+                >
+              </div>
+            </div>
+            <button
+              aria-label="Start Recommended Math Lesson"
+              class="shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-lowest text-primary shadow-sm hover:scale-105 active:scale-95 transition-all"
+              id="quick-start-lesson"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-[22px]"
+                >play_arrow</span
+              >
+            </button>
+          </div>
+          <!-- Toast Notification Overlay for Locked Subjects -->
+          <div
+            class="fixed bottom-20 left-1/2 -translate-x-1/2 w-[90%] max-w-sm bg-inverse-surface text-inverse-on-surface px-4 py-3 rounded-full shadow-2xl flex items-center justify-between gap-2 transition-all duration-300 pointer-events-none opacity-0 translate-y-4 z-50"
+            id="notification-toast"
+          >
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-secondary text-[20px]"
+                >notifications_active</span
+              >
+              <span
+                class="font-body-sm text-body-sm font-medium"
+                id="toast-text"
+                >អ្នកនឹងទទួលបានដំណឹងឆាប់ៗ!</span
+              >
+            </div>
+            <span
+              class="font-label-badge text-label-badge bg-surface-container-high/30 px-2 py-0.5 rounded-full"
+              >Saved</span
+            >
+          </div>
+        </div>
+      </div>
+      <script>
+        // Navigation trigger for Math module
+        const mathCard = document.getElementById('math-card')
+        const quickStartBtn = document.getElementById('quick-start-lesson')
+
+        function navigateToMath() {
+          // Provide tactile click feedback and transition
+          if (mathCard) {
+            mathCard.classList.add('scale-[0.98]')
+            setTimeout(() => {
+              mathCard.classList.remove('scale-[0.98]')
+              // Navigate or update state to subjects view / home math learning matrix
+              const navEvent = new CustomEvent('kela:navigate', {
+                detail: { path: 'math-world', grade: 2 },
+              })
+              window.dispatchEvent(navEvent)
+              // Fallback standard location hash or mock transition
+              window.location.hash = '#math-curriculum'
+            }, 150)
+          }
+        }
+
+        if (mathCard) {
+          mathCard.addEventListener('click', navigateToMath)
+          mathCard.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              navigateToMath()
+            }
+          })
+        }
+
+        if (quickStartBtn) {
+          quickStartBtn.addEventListener('click', (e) => {
+            e.stopPropagation()
+            navigateToMath()
+          })
+        }
+
+        // Toast feedback for locked subjects
+        let toastTimer
+        function showNotifyToast(subjectName) {
+          const toast = document.getElementById('notification-toast')
+          const toastText = document.getElementById('toast-text')
+          if (!toast || !toastText) return
+
+          toastText.textContent = `បានកត់ត្រាការរំលឹក: ${subjectName}`
+          toast.classList.remove(
+            'opacity-0',
+            'translate-y-4',
+            'pointer-events-none',
+          )
+          toast.classList.add('opacity-100', 'translate-y-0')
+
+          clearTimeout(toastTimer)
+          toastTimer = setTimeout(() => {
+            toast.classList.add(
+              'opacity-0',
+              'translate-y-4',
+              'pointer-events-none',
+            )
+            toast.classList.remove('opacity-100', 'translate-y-0')
+          }, 2400)
+        }
+
+        // Voice search mic pulse animation effect
+        const micButton = document.getElementById('mic-button')
+        if (micButton) {
+          micButton.addEventListener('click', () => {
+            micButton.classList.toggle('bg-secondary')
+            micButton.classList.toggle('text-on-secondary')
+            const searchInput = document.getElementById('subject-search-input')
+            if (searchInput) {
+              searchInput.value = 'គណិតវិទ្យា Grade 2'
+              searchInput.focus()
+            }
+          })
+        }
+      </script>
+    </main>
+    <nav
+      class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(19,27,46,0.04)]"
+      data-active-classes="text-primary font-bold"
+    >
+      <div class="h-16 px-gutter flex items-center justify-around">
+        <a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="home"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">cottage</span
+          ><span class="font-label-badge text-label-badge mt-0.5">Home</span></a
+        ><a
+          aria-current="page"
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] transition-colors text-primary font-bold"
+          data-path="subjects"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">menu_book</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Subjects</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="avatar-studio"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">styler</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Avatar Studio</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="progress"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]"
+            >military_tech</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Progress</span
+          ></a
+        >
+      </div>
+    </nav>
+  </body>
+</html>

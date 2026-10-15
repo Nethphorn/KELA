@@ -1,0 +1,734 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100vw;
+          margin: 0;
+          padding: 0;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+          overscroll-behavior: none;
+          background-color: #faf8ff;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'secondary-fixed': '#ffd9e4',
+              outline: '#6f787d',
+              'on-surface-variant': '#3f484c',
+              'inverse-on-surface': '#eef0ff',
+              'primary-fixed': '#b9eaff',
+              'surface-container': '#eaedff',
+              'primary-container': '#0e7490',
+              'on-tertiary': '#ffffff',
+              secondary: '#b4136d',
+              'on-secondary-fixed': '#3e0022',
+              'primary-fixed-dim': '#81d1f0',
+              'surface-variant': '#dae2fd',
+              'surface-tint': '#006781',
+              tertiary: '#764900',
+              error: '#ba1a1a',
+              'on-primary-fixed-variant': '#004d62',
+              'surface-container-lowest': '#ffffff',
+              'on-tertiary-container': '#ffe9d4',
+              'on-error-container': '#93000a',
+              'surface-container-high': '#e2e7ff',
+              'tertiary-fixed-dim': '#ffb95f',
+              'surface-dim': '#d2d9f4',
+              'inverse-primary': '#81d1f0',
+              background: '#faf8ff',
+              'error-container': '#ffdad6',
+              'tertiary-container': '#965f00',
+              'surface-container-low': '#f2f3ff',
+              surface: '#faf8ff',
+              'on-tertiary-fixed-variant': '#653e00',
+              'on-primary-container': '#d3f1ff',
+              'on-secondary-fixed-variant': '#8c0053',
+              'on-surface': '#131b2e',
+              'tertiary-fixed': '#ffddb8',
+              'secondary-fixed-dim': '#ffb0cd',
+              'on-error': '#ffffff',
+              'outline-variant': '#bec8cd',
+              'on-secondary': '#ffffff',
+              'secondary-container': '#fd56a7',
+              'on-primary': '#ffffff',
+              'on-tertiary-fixed': '#2a1700',
+              'inverse-surface': '#283044',
+              'on-primary-fixed': '#001f29',
+              'on-secondary-container': '#600037',
+              primary: '#005a71',
+              'on-background': '#131b2e',
+              'surface-container-highest': '#dae2fd',
+              'surface-bright': '#faf8ff',
+            },
+            borderRadius: {
+              DEFAULT: '1rem',
+              lg: '2rem',
+              xl: '3rem',
+              full: '9999px',
+            },
+            spacing: {
+              'space-lg': '1.25rem',
+              'space-xs': '0.25rem',
+              'space-xl': '2rem',
+              gutter: '1rem',
+              'space-sm': '0.5rem',
+              'gutter-mobile': '0.75rem',
+              margin: '1.5rem',
+              'margin-mobile': '1rem',
+              'space-md': '0.875rem',
+            },
+            fontFamily: {
+              'headline-lg': ['Plus Jakarta Sans'],
+              'title-sm': ['Plus Jakarta Sans'],
+              'body-sm': ['Plus Jakarta Sans'],
+              'body-lg': ['Plus Jakarta Sans'],
+              'headline-lg-mobile': ['Plus Jakarta Sans'],
+              'label-badge': ['Plus Jakarta Sans'],
+              'headline-md': ['Plus Jakarta Sans'],
+              'display-hero-mobile': ['Plus Jakarta Sans'],
+              'math-display': ['Plus Jakarta Sans'],
+              'body-md': ['Plus Jakarta Sans'],
+              'display-hero': ['Plus Jakarta Sans'],
+            },
+            fontSize: {
+              'headline-lg': [
+                '24px',
+                { lineHeight: '32px', fontWeight: '700' },
+              ],
+              'title-sm': ['15px', { lineHeight: '22px', fontWeight: '600' }],
+              'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }],
+              'body-lg': ['16px', { lineHeight: '24px', fontWeight: '500' }],
+              'headline-lg-mobile': [
+                '20px',
+                { lineHeight: '28px', fontWeight: '700' },
+              ],
+              'label-badge': [
+                '11px',
+                { lineHeight: '14px', fontWeight: '700' },
+              ],
+              'headline-md': [
+                '18px',
+                { lineHeight: '26px', fontWeight: '700' },
+              ],
+              'display-hero-mobile': [
+                '26px',
+                { lineHeight: '34px', fontWeight: '800' },
+              ],
+              'math-display': [
+                '28px',
+                { lineHeight: '36px', fontWeight: '700' },
+              ],
+              'body-md': ['14px', { lineHeight: '20px', fontWeight: '500' }],
+              'display-hero': [
+                '32px',
+                { lineHeight: '40px', fontWeight: '800' },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface flex flex-col min-h-screen">
+    <header
+      class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_2px_12px_rgba(19,27,46,0.03)]"
+    >
+      <div
+        class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"
+      >
+        <div class="flex items-center gap-space-xs">
+          <img
+            alt="KELA Math Mascot Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_CTJ6NKYSsqc-Z1EOe0_XdezPgJU_HuVqwR4nJcUzTwsX5t4RA5C6taR5K-2yL_-DHRQmYAMjoQV-OdUCUsgokUZBBlRmQHbA1aZmDiFIo85peLZ0qvmPOc_aO2VcAe4bmfrW-ntjgz__Q1Qpev9CRkc0WtRpmm3WpgHOg8Vbih2zczgpXCOcv6mQHnyi3ywD0O7AGHww2m03fH_iKKJxatNXdLeQnCpx5tYUqJGBaePjR6HHyic"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-headline-md text-headline-md text-primary leading-none"
+              >KELA Kids</span
+            ><span
+              class="font-label-badge text-label-badge text-on-surface-variant leading-none mt-0.5"
+              >Home</span
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs overflow-x-auto py-1">
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">🪙</span
+            ><span
+              class="font-label-badge text-label-badge text-tertiary font-bold"
+              >1,250</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">⭐</span
+            ><span
+              class="font-label-badge text-label-badge text-tertiary-container font-bold"
+              >350</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">🔥</span
+            ><span
+              class="font-label-badge text-label-badge text-secondary font-bold"
+              >7d</span
+            >
+          </div>
+        </div>
+        <div class="relative flex-shrink-0">
+          <div class="p-0.5 rounded-full bg-surface-container-high">
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQ1r6ZGmJdyfhIyihGofoVbcAqd1nHhCcLd5BnTh3JU0zPfaeJjkAz8z3_XoFF0wfs_FAlnDStQktjUPXnvSnV5edXGjPyP-G29Cr0qIXP_7u5a5_Da565h-2DvYqpmuX_FW3ZJ-H3ZfLA5layiOlg-9wzutnXR3uxZnskRpUJVJmE_CgR_jWZ1eIxTs8eCid1qJC2immH5ewXVolSK1JvObviVktJMB1a-r5r44oXXs-3yKhJ_XY"
+            />
+          </div>
+          <span
+            class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary font-label-badge text-[9px] px-1 py-0.2 rounded-full font-bold shadow-[0_2px_4px_rgba(180,19,109,0.25)]"
+            >Lv.4</span
+          >
+        </div>
+      </div>
+    </header>
+    <main
+      class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"
+    >
+      <div class="flex flex-col w-full px-margin-mobile gap-space-md pb-6">
+        <!-- Greeting & Level Progress Card -->
+        <section
+          class="flex flex-col bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm"
+        >
+          <div
+            class="flex items-center justify-between gap-space-sm mb-space-sm"
+          >
+            <div class="flex flex-col min-w-0">
+              <span
+                class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface truncate"
+              >
+                សួស្ដី Dara! 👋
+              </span>
+              <span class="font-body-md text-body-md text-on-surface-variant">
+                Ready to discover math magic today?
+              </span>
+            </div>
+            <div
+              class="flex-shrink-0 bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full flex items-center gap-1 shadow-sm"
+            >
+              <span
+                class="material-symbols-outlined text-sm font-bold text-primary"
+                >auto_awesome</span
+              >
+              <span
+                class="font-label-badge text-label-badge font-bold uppercase tracking-wider"
+                >Level 4</span
+              >
+            </div>
+          </div>
+          <!-- XP Progress Bar -->
+          <div class="flex flex-col gap-1.5 mt-1">
+            <div
+              class="flex justify-between items-center text-on-surface-variant font-label-badge text-label-badge"
+            >
+              <span class="font-semibold text-primary"
+                >Lv. 4 Math Explorer</span
+              >
+              <span><strong class="text-on-surface">340</strong> / 500 XP</span>
+            </div>
+            <div
+              class="w-full bg-surface-container h-3.5 rounded-full overflow-hidden p-0.5 shadow-inner"
+            >
+              <div
+                class="bg-gradient-to-r from-primary-fixed-dim via-primary to-primary h-full rounded-full transition-all duration-500 ease-out"
+                style="width: 68%"
+              ></div>
+            </div>
+          </div>
+        </section>
+        <!-- Highlight Quick Stats Row -->
+        <section class="grid grid-cols-3 gap-2">
+          <div
+            class="flex flex-col items-center justify-center bg-surface-container-lowest p-2.5 rounded-2xl shadow-sm text-center"
+          >
+            <span class="text-xl mb-0.5">🔥</span>
+            <span
+              class="font-headline-md text-headline-md text-secondary leading-none"
+              >7d</span
+            >
+            <span
+              class="font-label-badge text-label-badge text-on-surface-variant mt-1"
+              >Streak</span
+            >
+          </div>
+          <div
+            class="flex flex-col items-center justify-center bg-surface-container-lowest p-2.5 rounded-2xl shadow-sm text-center"
+          >
+            <span class="text-xl mb-0.5">⭐</span>
+            <span
+              class="font-headline-md text-headline-md text-tertiary-container leading-none"
+              >12</span
+            >
+            <span
+              class="font-label-badge text-label-badge text-on-surface-variant mt-1"
+              >Badges</span
+            >
+          </div>
+          <div
+            class="flex flex-col items-center justify-center bg-surface-container-lowest p-2.5 rounded-2xl shadow-sm text-center"
+          >
+            <span class="text-xl mb-0.5">🪙</span>
+            <span
+              class="font-headline-md text-headline-md text-tertiary leading-none"
+              >1,250</span
+            >
+            <span
+              class="font-label-badge text-label-badge text-on-surface-variant mt-1"
+              >Coins</span
+            >
+          </div>
+        </section>
+        <!-- Quick Resume Card (Featured Unit) -->
+        <section
+          class="relative bg-surface-container-lowest rounded-3xl p-space-lg shadow-sm overflow-hidden flex flex-col gap-space-sm"
+        >
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span
+                class="flex h-2.5 w-2.5 rounded-full bg-secondary-container animate-pulse"
+              ></span>
+              <span
+                class="font-label-badge text-label-badge text-secondary font-bold tracking-wide uppercase"
+              >
+                កំពុងសិក្សា • Continue Active Lesson
+              </span>
+            </div>
+            <span
+              class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2.5 py-1 rounded-full font-bold"
+            >
+              Unit 2
+            </span>
+          </div>
+          <div class="flex items-start gap-space-sm mt-1">
+            <div
+              class="w-12 h-12 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0 shadow-sm"
+            >
+              <span class="material-symbols-outlined text-2xl font-bold"
+                >add</span
+              >
+            </div>
+            <div class="flex flex-col min-w-0 flex-1">
+              <h2
+                class="font-headline-md text-headline-md text-on-surface truncate"
+              >
+                វិធីបូក • Addition Focus
+              </h2>
+              <span
+                class="font-body-sm text-body-sm text-on-surface-variant truncate"
+              >
+                ការបូកមានត្រាទុក (Addition with Carrying) • Grade 2
+              </span>
+            </div>
+          </div>
+          <!-- Lesson Progress -->
+          <div class="flex flex-col gap-1.5 mt-2">
+            <div
+              class="flex justify-between items-center font-label-badge text-label-badge"
+            >
+              <span class="text-on-surface-variant"
+                >នៅសល់ ១ មេរៀនទៀត (1 left)</span
+              >
+              <span class="font-bold text-primary">80% (4/5)</span>
+            </div>
+            <div
+              class="w-full bg-surface-container h-3 rounded-full overflow-hidden"
+            >
+              <div
+                class="bg-primary h-full rounded-full transition-all duration-500"
+                style="width: 80%"
+              ></div>
+            </div>
+          </div>
+          <!-- Chunky Bouncy Button -->
+          <button
+            class="w-full mt-2 bg-primary text-on-primary font-title-sm text-title-sm py-3 px-space-md rounded-full shadow-[0_4px_0_0_#003c4c] active:translate-y-1 active:shadow-[0_1px_0_0_#003c4c] transition-all flex items-center justify-center gap-2"
+            type="button"
+          >
+            <span
+              class="material-symbols-outlined text-lg"
+              style="font-variation-settings: 'FILL' 1"
+              >play_arrow</span
+            >
+            <span>Resume Lesson • បន្តការរៀន</span>
+          </button>
+        </section>
+        <!-- My Math Buddy / Pet Companion Card -->
+        <section
+          class="bg-surface-container-low rounded-3xl p-space-lg shadow-sm flex flex-col gap-space-sm relative overflow-hidden"
+        >
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-secondary text-xl"
+                >pets</span
+              >
+              <h3 class="font-headline-md text-headline-md text-on-surface">
+                Math Buddy
+              </h3>
+            </div>
+            <span
+              class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2.5 py-1 rounded-full font-bold"
+            >
+              Active Companion
+            </span>
+          </div>
+          <div
+            class="flex items-center gap-space-md bg-surface-container-lowest p-3 rounded-2xl shadow-sm"
+          >
+            <div
+              class="relative w-16 h-16 rounded-2xl overflow-hidden bg-primary-fixed flex-shrink-0 flex items-center justify-center"
+            >
+              <img
+                class="w-full h-full object-cover"
+                data-alt="Cute 3D baby dragon character mascot for a children's math game named Sparky, playful friendly facial expression with big glistening cartoon eyes, warm pastel lighting, teal and lilac scales, vibrant whimsical render on clean backdrop"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACs5HUOWU6ZuE56D3JFmX44_vUrwPUg6tN7d_HHlQWpf15Dq9cQQ8xneCuZKRagBsk1XlR0Hs7vMXIBcg78JmfX_-Vvjy4eXg2QjLzsl4onUFsv5aWTMPIjHpqSkqA1xjvgj33nNJiGgd_VLw6pXYLeIAbrgSHn6elGSdvcA1nJ1HY_cLJyOG6t1O9kCCsWlsSs32OEiAw91C4uDOo7qVRM7BObWU1ZSS8ljFo2_fWUwHCpNUpu5vF"
+              />
+              <span
+                class="absolute bottom-0 right-0 bg-primary text-on-primary font-label-badge text-[10px] px-1.5 py-0.5 rounded-tl-lg font-bold"
+                >Lv.4</span
+              >
+            </div>
+            <div class="flex flex-col min-w-0 flex-1">
+              <div class="flex items-center gap-1">
+                <span
+                  class="font-title-sm text-title-sm text-on-surface font-bold truncate"
+                  >Sparky the Dragon</span
+                >
+                <span class="text-sm">✨</span>
+              </div>
+              <div
+                class="flex items-center gap-1 text-tertiary-container mt-0.5 font-label-badge text-label-badge bg-tertiary-fixed px-2 py-0.5 rounded-md w-fit"
+              >
+                <span class="material-symbols-outlined text-xs">bolt</span>
+                <span>Companion Boost: +10% Coins!</span>
+              </div>
+              <span
+                class="font-body-sm text-body-sm text-on-surface-variant mt-1"
+                >Status: Happy &amp; energised</span
+              >
+            </div>
+          </div>
+          <!-- Pet Quick Actions -->
+          <div class="grid grid-cols-2 gap-space-sm pt-1">
+            <button
+              class="bg-surface-container-lowest text-on-surface hover:bg-surface-container-high py-2.5 px-space-sm rounded-2xl shadow-sm flex items-center justify-center gap-1.5 font-label-badge text-label-badge transition-colors active:scale-95"
+              id="feed-btn"
+              type="button"
+            >
+              <span class="text-base">🍎</span>
+              <span class="font-bold">Feed Sparky</span>
+            </button>
+            <button
+              class="bg-secondary text-on-secondary hover:bg-secondary/90 py-2.5 px-space-sm rounded-2xl shadow-[0_3px_0_0_#750043] active:translate-y-0.5 active:shadow-[0_1px_0_0_#750043] flex items-center justify-center gap-1.5 font-label-badge text-label-badge transition-all"
+              type="button"
+            >
+              <span class="material-symbols-outlined text-base">cottage</span>
+              <span class="font-bold">Pet Sanctuary 🐾</span>
+            </button>
+          </div>
+        </section>
+        <!-- Today's Quests & Challenges Section -->
+        <section class="flex flex-col gap-space-sm">
+          <div class="flex items-center justify-between px-1">
+            <div class="flex items-center gap-2">
+              <h3
+                class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface"
+              >
+                Today's Quests &amp; Worlds
+              </h3>
+            </div>
+            <span
+              class="bg-primary-fixed-dim text-on-primary-fixed-variant font-label-badge text-label-badge px-2.5 py-1 rounded-full font-bold"
+            >
+              3 Active
+            </span>
+          </div>
+          <!-- Quest 1: Speed Math Blast -->
+          <div
+            class="bg-surface-container-lowest rounded-3xl p-space-md shadow-sm flex flex-col gap-space-sm relative"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-space-sm min-w-0">
+                <div
+                  class="w-11 h-11 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center flex-shrink-0"
+                >
+                  <span
+                    class="material-symbols-outlined text-2xl"
+                    style="font-variation-settings: 'FILL' 1"
+                    >bolt</span
+                  >
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <div class="flex items-center gap-1.5">
+                    <span
+                      class="font-title-sm text-title-sm text-on-surface truncate font-bold"
+                      >Daily Math Blast ⚡</span
+                    >
+                    <span
+                      class="bg-tertiary text-on-tertiary font-label-badge text-[10px] px-1.5 py-0.5 rounded-full font-bold"
+                      >+50 🪙</span
+                    >
+                  </div>
+                  <span
+                    class="font-body-sm text-body-sm text-on-surface-variant truncate"
+                    >60s Rapid Speed Challenge</span
+                  >
+                </div>
+              </div>
+              <button
+                class="flex-shrink-0 bg-tertiary text-on-tertiary font-label-badge text-label-badge px-3 py-2 rounded-full shadow-[0_3px_0_0_#492c00] active:translate-y-0.5 active:shadow-[0_1px_0_0_#492c00] transition-all font-bold"
+                type="button"
+              >
+                Start Now
+              </button>
+            </div>
+          </div>
+          <!-- Quest 2: Numbers & Counting (Completed 100%) -->
+          <div
+            class="bg-surface-container-lowest rounded-3xl p-space-md shadow-sm flex flex-col gap-space-sm"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-space-sm min-w-0">
+                <div
+                  class="w-11 h-11 rounded-2xl bg-surface-variant text-primary flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="material-symbols-outlined text-2xl font-bold"
+                    >counter_1</span
+                  >
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-label-badge text-label-badge text-on-surface-variant"
+                    >Unit 1 • ជំពូកទី ១</span
+                  >
+                  <span
+                    class="font-title-sm text-title-sm text-on-surface truncate font-bold"
+                    >ចំនួន និងការរាប់ (Numbers)</span
+                  >
+                </div>
+              </div>
+              <div
+                class="flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-primary font-label-badge text-label-badge font-bold"
+              >
+                <span class="material-symbols-outlined text-sm font-bold"
+                  >check_circle</span
+                >
+                <span>100%</span>
+              </div>
+            </div>
+            <div class="flex flex-col gap-1">
+              <div
+                class="w-full bg-surface-container h-2 rounded-full overflow-hidden"
+              >
+                <div
+                  class="bg-primary-container h-full rounded-full w-full"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between items-center font-label-badge text-label-badge text-on-surface-variant"
+              >
+                <span>បានរៀបចប់សព្វគ្រប់ (Completed)</span>
+                <span class="font-semibold text-primary">6 / 6</span>
+              </div>
+            </div>
+          </div>
+          <!-- Quest 3: Subtraction Quest (In Progress 60%) -->
+          <div
+            class="bg-surface-container-lowest rounded-3xl p-space-md shadow-sm flex flex-col gap-space-sm"
+          >
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-space-sm min-w-0">
+                <div
+                  class="w-11 h-11 rounded-2xl bg-secondary-fixed text-secondary flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="material-symbols-outlined text-2xl font-bold"
+                    >remove</span
+                  >
+                </div>
+                <div class="flex flex-col min-w-0">
+                  <span
+                    class="font-label-badge text-label-badge text-on-surface-variant"
+                    >Unit 3 • ជំពូកទី ៣</span
+                  >
+                  <span
+                    class="font-title-sm text-title-sm text-on-surface truncate font-bold"
+                    >វិធីដក • Subtraction Quest</span
+                  >
+                </div>
+              </div>
+              <span
+                class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-label-badge px-2.5 py-1 rounded-full font-bold"
+              >
+                60% Done
+              </span>
+            </div>
+            <div class="flex flex-col gap-1">
+              <div
+                class="w-full bg-surface-container h-2 rounded-full overflow-hidden"
+              >
+                <div
+                  class="bg-secondary h-full rounded-full transition-all duration-500"
+                  style="width: 60%"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between items-center font-label-badge text-label-badge text-on-surface-variant"
+              >
+                <span>វិធីដកមានខ្ចី (Regrouping practice)</span>
+                <span class="font-semibold text-secondary">3 / 5 Lessons</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Dual-Language AI Practice Buddy Floating Banner -->
+        <section
+          class="bg-gradient-to-r from-primary-fixed-dim/30 to-surface-container-high rounded-3xl p-space-md flex items-center justify-between gap-space-sm shadow-sm mt-1"
+        >
+          <div class="flex items-center gap-space-sm min-w-0">
+            <div
+              class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary flex-shrink-0 shadow-sm"
+            >
+              <span class="material-symbols-outlined text-xl">smart_toy</span>
+            </div>
+            <div class="flex flex-col min-w-0">
+              <span
+                class="font-title-sm text-title-sm text-on-surface font-bold truncate"
+                >Need help solving a problem?</span
+              >
+              <span
+                class="font-body-sm text-body-sm text-on-surface-variant truncate"
+                >Ask your AI Math Coach in ភាសាខ្មែរ or English</span
+              >
+            </div>
+          </div>
+          <button
+            class="bg-surface-container-lowest text-primary p-2.5 rounded-full shadow-sm hover:bg-surface-container transition-colors flex-shrink-0"
+            type="button"
+          >
+            <span class="material-symbols-outlined text-lg">forum</span>
+          </button>
+        </section>
+      </div>
+      <script>
+        ;(function () {
+          const feedBtn = document.getElementById('feed-btn')
+          if (feedBtn) {
+            feedBtn.addEventListener('click', function () {
+              const originalContent = feedBtn.innerHTML
+              feedBtn.innerHTML =
+                '<span class="text-base">✨</span><span class="font-bold text-secondary">Sparky +20 XP!</span>'
+              feedBtn.classList.add('bg-secondary-fixed')
+              setTimeout(function () {
+                feedBtn.innerHTML = originalContent
+                feedBtn.classList.remove('bg-secondary-fixed')
+              }, 1500)
+            })
+          }
+        })()
+      </script>
+    </main>
+    <nav
+      class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(19,27,46,0.04)]"
+      data-active-classes="text-primary font-bold"
+    >
+      <div class="h-16 px-gutter flex items-center justify-around">
+        <a
+          aria-current="page"
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] transition-colors text-primary font-bold"
+          data-path="home"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">cottage</span
+          ><span class="font-label-badge text-label-badge mt-0.5">Home</span></a
+        ><a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="subjects"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">menu_book</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Subjects</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="avatar-studio"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">styler</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Avatar Studio</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="progress"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]"
+            >military_tech</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Progress</span
+          ></a
+        >
+      </div>
+    </nav>
+  </body>
+</html>

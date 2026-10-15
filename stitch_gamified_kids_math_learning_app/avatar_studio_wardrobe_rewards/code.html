@@ -1,0 +1,964 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+      name="viewport"
+    />
+    <meta content="mobile_tab" name="shell-type" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @layer base {
+        html,
+        body {
+          width: 100vw;
+          margin: 0;
+          padding: 0;
+          font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        body {
+          overscroll-behavior: none;
+          background-color: #faf8ff;
+        }
+        .pb-safe {
+          padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+        .pt-safe {
+          padding-top: env(safe-area-inset-top, 0px);
+        }
+        main > :first-child {
+          margin-top: 0 !important;
+        }
+        main > :last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'secondary-fixed': '#ffd9e4',
+              outline: '#6f787d',
+              'on-surface-variant': '#3f484c',
+              'inverse-on-surface': '#eef0ff',
+              'primary-fixed': '#b9eaff',
+              'surface-container': '#eaedff',
+              'primary-container': '#0e7490',
+              'on-tertiary': '#ffffff',
+              secondary: '#b4136d',
+              'on-secondary-fixed': '#3e0022',
+              'primary-fixed-dim': '#81d1f0',
+              'surface-variant': '#dae2fd',
+              'surface-tint': '#006781',
+              tertiary: '#764900',
+              error: '#ba1a1a',
+              'on-primary-fixed-variant': '#004d62',
+              'surface-container-lowest': '#ffffff',
+              'on-tertiary-container': '#ffe9d4',
+              'on-error-container': '#93000a',
+              'surface-container-high': '#e2e7ff',
+              'tertiary-fixed-dim': '#ffb95f',
+              'surface-dim': '#d2d9f4',
+              'inverse-primary': '#81d1f0',
+              background: '#faf8ff',
+              'error-container': '#ffdad6',
+              'tertiary-container': '#965f00',
+              'surface-container-low': '#f2f3ff',
+              surface: '#faf8ff',
+              'on-tertiary-fixed-variant': '#653e00',
+              'on-primary-container': '#d3f1ff',
+              'on-secondary-fixed-variant': '#8c0053',
+              'on-surface': '#131b2e',
+              'tertiary-fixed': '#ffddb8',
+              'secondary-fixed-dim': '#ffb0cd',
+              'on-error': '#ffffff',
+              'outline-variant': '#bec8cd',
+              'on-secondary': '#ffffff',
+              'secondary-container': '#fd56a7',
+              'on-primary': '#ffffff',
+              'on-tertiary-fixed': '#2a1700',
+              'inverse-surface': '#283044',
+              'on-primary-fixed': '#001f29',
+              'on-secondary-container': '#600037',
+              primary: '#005a71',
+              'on-background': '#131b2e',
+              'surface-container-highest': '#dae2fd',
+              'surface-bright': '#faf8ff',
+            },
+            borderRadius: {
+              DEFAULT: '1rem',
+              lg: '2rem',
+              xl: '3rem',
+              full: '9999px',
+            },
+            spacing: {
+              'space-lg': '1.25rem',
+              'space-xs': '0.25rem',
+              'space-xl': '2rem',
+              gutter: '1rem',
+              'space-sm': '0.5rem',
+              'gutter-mobile': '0.75rem',
+              margin: '1.5rem',
+              'margin-mobile': '1rem',
+              'space-md': '0.875rem',
+            },
+            fontFamily: {
+              'headline-lg': ['Plus Jakarta Sans'],
+              'title-sm': ['Plus Jakarta Sans'],
+              'body-sm': ['Plus Jakarta Sans'],
+              'body-lg': ['Plus Jakarta Sans'],
+              'headline-lg-mobile': ['Plus Jakarta Sans'],
+              'label-badge': ['Plus Jakarta Sans'],
+              'headline-md': ['Plus Jakarta Sans'],
+              'display-hero-mobile': ['Plus Jakarta Sans'],
+              'math-display': ['Plus Jakarta Sans'],
+              'body-md': ['Plus Jakarta Sans'],
+              'display-hero': ['Plus Jakarta Sans'],
+            },
+            fontSize: {
+              'headline-lg': [
+                '24px',
+                { lineHeight: '32px', fontWeight: '700' },
+              ],
+              'title-sm': ['15px', { lineHeight: '22px', fontWeight: '600' }],
+              'body-sm': ['12px', { lineHeight: '18px', fontWeight: '400' }],
+              'body-lg': ['16px', { lineHeight: '24px', fontWeight: '500' }],
+              'headline-lg-mobile': [
+                '20px',
+                { lineHeight: '28px', fontWeight: '700' },
+              ],
+              'label-badge': [
+                '11px',
+                { lineHeight: '14px', fontWeight: '700' },
+              ],
+              'headline-md': [
+                '18px',
+                { lineHeight: '26px', fontWeight: '700' },
+              ],
+              'display-hero-mobile': [
+                '26px',
+                { lineHeight: '34px', fontWeight: '800' },
+              ],
+              'math-display': [
+                '28px',
+                { lineHeight: '36px', fontWeight: '700' },
+              ],
+              'body-md': ['14px', { lineHeight: '20px', fontWeight: '500' }],
+              'display-hero': [
+                '32px',
+                { lineHeight: '40px', fontWeight: '800' },
+              ],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface flex flex-col min-h-screen">
+    <header
+      class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_2px_12px_rgba(19,27,46,0.03)]"
+    >
+      <div
+        class="h-20 px-margin-mobile flex items-center justify-between gap-space-sm"
+      >
+        <div class="flex items-center gap-space-xs">
+          <img
+            alt="KELA Math Mascot Logo"
+            class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_CTJ6NKYSsqc-Z1EOe0_XdezPgJU_HuVqwR4nJcUzTwsX5t4RA5C6taR5K-2yL_-DHRQmYAMjoQV-OdUCUsgokUZBBlRmQHbA1aZmDiFIo85peLZ0qvmPOc_aO2VcAe4bmfrW-ntjgz__Q1Qpev9CRkc0WtRpmm3WpgHOg8Vbih2zczgpXCOcv6mQHnyi3ywD0O7AGHww2m03fH_iKKJxatNXdLeQnCpx5tYUqJGBaePjR6HHyic"
+          />
+          <div class="flex flex-col">
+            <span
+              class="font-headline-md text-headline-md text-primary leading-none"
+              >KELA Kids</span
+            ><span
+              class="font-label-badge text-label-badge text-on-surface-variant leading-none mt-0.5"
+              >Avatar Studio</span
+            >
+          </div>
+        </div>
+        <div class="flex items-center gap-space-xs overflow-x-auto py-1">
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">🪙</span
+            ><span
+              class="font-label-badge text-label-badge text-tertiary font-bold"
+              >1,250</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">⭐</span
+            ><span
+              class="font-label-badge text-label-badge text-tertiary-container font-bold"
+              >350</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-1 bg-surface-container-lowest px-2 py-1 rounded-full shadow-[0_1px_4px_rgba(0,0,0,0.04)] border-0"
+          >
+            <span class="text-sm">🔥</span
+            ><span
+              class="font-label-badge text-label-badge text-secondary font-bold"
+              >7d</span
+            >
+          </div>
+        </div>
+        <div class="relative flex-shrink-0">
+          <div class="p-0.5 rounded-full bg-surface-container-high">
+            <img
+              alt="Profile"
+              class="w-8 h-8 rounded-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwQ1r6ZGmJdyfhIyihGofoVbcAqd1nHhCcLd5BnTh3JU0zPfaeJjkAz8z3_XoFF0wfs_FAlnDStQktjUPXnvSnV5edXGjPyP-G29Cr0qIXP_7u5a5_Da565h-2DvYqpmuX_FW3ZJ-H3ZfLA5layiOlg-9wzutnXR3uxZnskRpUJVJmE_CgR_jWZ1eIxTs8eCid1qJC2immH5ewXVolSK1JvObviVktJMB1a-r5r44oXXs-3yKhJ_XY"
+            />
+          </div>
+          <span
+            class="absolute -bottom-1 -right-1 bg-secondary text-on-secondary font-label-badge text-[9px] px-1 py-0.2 rounded-full font-bold shadow-[0_2px_4px_rgba(180,19,109,0.25)]"
+            >Lv.4</span
+          >
+        </div>
+      </div>
+    </header>
+    <main
+      class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"
+    >
+      <div class="flex flex-col w-full px-margin-mobile pb-space-xl">
+        <!-- Studio Header Meta bar -->
+        <div class="flex items-center justify-between py-space-sm gap-2">
+          <div
+            class="flex items-center gap-1.5 bg-surface-container-lowest px-3 py-1.5 rounded-full shadow-sm"
+          >
+            <span class="text-sm">🎨</span>
+            <span class="font-title-sm text-title-sm text-primary"
+              >Wardrobe Studio</span
+            >
+          </div>
+          <div
+            class="flex items-center gap-1 bg-surface-container-high px-3 py-1.5 rounded-full cursor-pointer hover:bg-surface-variant transition-colors"
+          >
+            <span
+              class="font-body-sm text-body-sm text-on-surface font-semibold flex items-center gap-1"
+            >
+              ✨ Dreamy Buddy #1
+            </span>
+            <span
+              class="material-symbols-outlined text-[16px] text-on-surface-variant"
+              >expand_more</span
+            >
+          </div>
+        </div>
+        <!-- Main 3D Avatar Preview Showcase Card -->
+        <div
+          class="relative w-full bg-surface-container-lowest rounded-lg p-space-md shadow-md flex flex-col items-center overflow-hidden my-space-sm"
+        >
+          <!-- Background glowing ambient halo -->
+          <div
+            class="absolute -top-12 -right-12 w-48 h-48 rounded-full bg-secondary-fixed opacity-40 blur-2xl pointer-events-none"
+          ></div>
+          <div
+            class="absolute -bottom-10 -left-10 w-44 h-44 rounded-full bg-primary-fixed opacity-40 blur-2xl pointer-events-none"
+          ></div>
+          <!-- Top floating pill controls -->
+          <div class="relative z-10 w-full flex items-center justify-between">
+            <div
+              class="flex items-center gap-1.5 bg-surface-container-low px-2.5 py-1 rounded-full shadow-sm"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+              ></span>
+              <span
+                class="font-label-badge text-label-badge text-on-surface-variant"
+                >Sparkle Buddy • Lv.5</span
+              >
+            </div>
+            <div class="flex items-center gap-1">
+              <button
+                class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface flex items-center justify-center hover:bg-surface-variant transition-transform active:scale-90 shadow-sm"
+                id="btn-spin"
+                title="Rotate Avatar"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >replay</span
+                >
+              </button>
+              <button
+                class="w-8 h-8 rounded-full bg-surface-container-low text-on-surface flex items-center justify-center hover:bg-surface-variant transition-transform active:scale-90 shadow-sm"
+                id="btn-rand"
+                title="Randomize Outfit"
+              >
+                <span class="material-symbols-outlined text-[18px]"
+                  >shuffle</span
+                >
+              </button>
+            </div>
+          </div>
+          <!-- Avatar Pedestal & 3D Model Display -->
+          <div
+            class="relative w-52 h-52 sm:w-60 sm:h-60 my-space-sm flex items-center justify-center"
+          >
+            <!-- Pedestal Glow & Rings -->
+            <div
+              class="absolute inset-0 rounded-full bg-gradient-to-b from-secondary-fixed/50 to-primary-fixed/40 p-2 shadow-inner"
+            >
+              <div
+                class="w-full h-full rounded-full bg-surface-container-lowest flex items-center justify-center overflow-hidden shadow-[0_8px_20px_rgba(253,86,167,0.15)]"
+              >
+                <img
+                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  data-alt="A plush 3D rendered pastel pink teddy bear character dressed in an intricate lace mint cardigan, wearing a cute red strawberry berry beret, soft angel wings on back, and clutching a sparkling magic star wand on a pastel round display pedestal, cute toy aesthetic with soft studio lighting and confetti sparkle depth"
+                  id="avatar-img"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWUUMGHapIZbuK-BrJMivVyf-TyfeF_zwHJNnUEma251BRts3n3HcpnWskpDjJD4O5f7hLle6jBT5yggL9UdUzOAkLy0N9hOnPobSean6qD202_ewFcSGrseoCvUScTqpDvxQ2PRKqQdbp7fNxpzRS9A7bAZyVqb9iaJB-ZJMHWjjNF9R88gCAQqo73AYwD_ApuVNwtEDuywAmQSGa9jfIw8sw1goXduT2OKtXPYdxMa_AqQZkHblK"
+                />
+              </div>
+            </div>
+            <!-- Floating equipped mini tags orbiting pedestal -->
+            <span
+              class="absolute top-2 right-1 bg-surface-container-lowest text-secondary shadow-md px-2 py-0.5 rounded-full font-label-badge text-label-badge flex items-center gap-1 animate-bounce"
+            >
+              🍓 Beret
+            </span>
+            <span
+              class="absolute bottom-4 left-1 bg-surface-container-lowest text-primary shadow-md px-2 py-0.5 rounded-full font-label-badge text-label-badge flex items-center gap-1"
+            >
+              🪽 Wings
+            </span>
+            <span
+              class="absolute bottom-2 right-3 bg-surface-container-lowest text-tertiary-container shadow-md px-2 py-0.5 rounded-full font-label-badge text-label-badge flex items-center gap-1"
+            >
+              ⭐ Wand
+            </span>
+          </div>
+          <!-- Drag to rotate feedback hint -->
+          <div
+            class="relative z-10 flex items-center gap-1.5 bg-surface-container-low/90 backdrop-blur px-3 py-1 rounded-full shadow-sm text-on-surface-variant"
+          >
+            <span class="material-symbols-outlined text-[16px] text-primary"
+              >360</span
+            >
+            <span class="font-label-badge text-label-badge"
+              >Tap rotate or swipe 360°</span
+            >
+          </div>
+        </div>
+        <!-- Category Nav Pills -->
+        <div class="w-full mt-space-md mb-space-sm">
+          <div
+            class="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar"
+          >
+            <button
+              class="cat-pill active flex items-center gap-1.5 px-4 py-2 rounded-full bg-primary text-on-primary font-title-sm text-title-sm shadow-md flex-shrink-0 transition-transform active:scale-95"
+            >
+              <span>✨</span>
+              <span>All Items</span>
+              <span
+                class="bg-primary-container text-on-primary-container px-1.5 py-0.2 rounded-full font-label-badge text-[10px]"
+                >9</span
+              >
+            </button>
+            <button
+              class="cat-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm flex-shrink-0 hover:bg-surface-container transition-transform active:scale-95"
+            >
+              <span>🎀</span>
+              <span>Hats &amp; Ears</span>
+            </button>
+            <button
+              class="cat-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm flex-shrink-0 hover:bg-surface-container transition-transform active:scale-95"
+            >
+              <span>👕</span>
+              <span>Clothes</span>
+            </button>
+            <button
+              class="cat-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm flex-shrink-0 hover:bg-surface-container transition-transform active:scale-95"
+            >
+              <span>🪽</span>
+              <span>Wings &amp; Back</span>
+            </button>
+            <button
+              class="cat-pill flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-title-sm text-title-sm shadow-sm flex-shrink-0 hover:bg-surface-container transition-transform active:scale-95"
+            >
+              <span>⭐</span>
+              <span>Magic &amp; Auras</span>
+            </button>
+          </div>
+        </div>
+        <!-- Search & Filter Filter-Bar -->
+        <div class="flex items-center gap-2 mb-space-md">
+          <div
+            class="relative flex-1 bg-surface-container-lowest rounded-full px-3 py-2 flex items-center gap-2 shadow-sm"
+          >
+            <span
+              class="material-symbols-outlined text-[18px] text-on-surface-variant"
+              >search</span
+            >
+            <input
+              class="bg-transparent border-0 outline-none w-full font-body-sm text-body-sm text-on-surface placeholder:text-outline"
+              placeholder="Search wardrobe items..."
+              type="text"
+            />
+          </div>
+          <div
+            class="flex items-center bg-surface-container-low p-1 rounded-full shadow-inner"
+          >
+            <button
+              class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-badge text-label-badge shadow-sm"
+            >
+              All
+            </button>
+            <button
+              class="px-2.5 py-1 rounded-full text-on-surface-variant font-label-badge text-label-badge hover:text-on-surface"
+            >
+              Owned
+            </button>
+            <button
+              class="px-2.5 py-1 rounded-full text-on-surface-variant font-label-badge text-label-badge hover:text-on-surface"
+            >
+              Shop
+            </button>
+          </div>
+        </div>
+        <!-- Wardrobe & Shop Grid (Tactile Blocks) -->
+        <div class="grid grid-cols-2 gap-space-sm mb-space-lg">
+          <!-- Item 1: Equipped Rare Hat -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-emerald-100 text-emerald-800 font-label-badge text-[10px] px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5"
+              >
+                <span class="material-symbols-outlined text-[12px]"
+                  >check_circle</span
+                >
+                In Use
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >🍓</span
+              >
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >HAT</span
+                >
+                <span class="text-[10px] text-secondary font-bold">RARE</span>
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Berry Beret
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-emerald-600 text-white font-title-sm text-[12px] font-bold shadow-[0_3px_0_0_#065f46] active:translate-y-0.5 active:shadow-[0_1px_0_0_#065f46] transition-all"
+            >
+              Equipped
+            </button>
+          </div>
+          <!-- Item 2: Equipped Mythic Wings -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-emerald-100 text-emerald-800 font-label-badge text-[10px] px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5"
+              >
+                <span class="material-symbols-outlined text-[12px]"
+                  >check_circle</span
+                >
+                In Use
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >🪽</span
+              >
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-primary-fixed text-on-primary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >BACK</span
+                >
+                <span class="text-[10px] text-primary font-bold">MYTHIC</span>
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Angel Wings
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-emerald-600 text-white font-title-sm text-[12px] font-bold shadow-[0_3px_0_0_#065f46] active:translate-y-0.5 active:shadow-[0_1px_0_0_#065f46] transition-all"
+            >
+              Equipped
+            </button>
+          </div>
+          <!-- Item 3: Equipped Legendary Wand -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-emerald-100 text-emerald-800 font-label-badge text-[10px] px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5"
+              >
+                <span class="material-symbols-outlined text-[12px]"
+                  >check_circle</span
+                >
+                In Use
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >⭐</span
+              >
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >HAND</span
+                >
+                <span class="text-[10px] text-tertiary-container font-bold"
+                  >LEGENDARY</span
+                >
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Star Wand
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-emerald-600 text-white font-title-sm text-[12px] font-bold shadow-[0_3px_0_0_#065f46] active:translate-y-0.5 active:shadow-[0_1px_0_0_#065f46] transition-all"
+            >
+              Equipped
+            </button>
+          </div>
+          <!-- Item 4: Owned Headset (Wearable) -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-surface-container-high text-on-surface-variant font-label-badge text-[10px] px-1.5 py-0.5 rounded-full"
+              >
+                Owned
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >🎧</span
+              >
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >AUDIO</span
+                >
+                <span class="text-[10px] text-secondary font-bold"
+                  >SPECIAL</span
+                >
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Neko Headset
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-secondary-fixed text-secondary font-title-sm text-[12px] font-bold hover:bg-secondary hover:text-on-secondary shadow-sm active:translate-y-0.5 transition-all"
+            >
+              Wear
+            </button>
+          </div>
+          <!-- Item 5: Owned Honey Pot Cap (Wearable) -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-surface-container-high text-on-surface-variant font-label-badge text-[10px] px-1.5 py-0.5 rounded-full"
+              >
+                Owned
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >🍯</span
+              >
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >HAT</span
+                >
+                <span class="text-[10px] text-tertiary font-bold">COMMON</span>
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Honey Pot Cap
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-secondary-fixed text-secondary font-title-sm text-[12px] font-bold hover:bg-secondary hover:text-on-secondary shadow-sm active:translate-y-0.5 transition-all"
+            >
+              Wear
+            </button>
+          </div>
+          <!-- Item 6: Owned Backpack -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-surface-container-high text-on-surface-variant font-label-badge text-[10px] px-1.5 py-0.5 rounded-full"
+              >
+                Owned
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >🎒</span
+              >
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >BACK</span
+                >
+                <span class="text-[10px] text-secondary font-bold">RARE</span>
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Explorer Bag
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-secondary-fixed text-secondary font-title-sm text-[12px] font-bold hover:bg-secondary hover:text-on-secondary shadow-sm active:translate-y-0.5 transition-all"
+            >
+              Wear
+            </button>
+          </div>
+          <!-- Item 7: Buyable with Coins (Dream Cloud Aura) -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-tertiary-fixed text-on-tertiary-fixed font-label-badge text-[10px] px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5"
+              >
+                <span class="material-symbols-outlined text-[11px]">lock</span>
+                Shop
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1 relative"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >☁️</span
+              >
+              <span class="absolute text-xl animate-pulse">✨</span>
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-primary-fixed text-on-primary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >AURA</span
+                >
+                <span class="text-[10px] text-primary font-bold">EPIC</span>
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Dream Cloud
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-tertiary-fixed text-tertiary font-title-sm text-[12px] font-bold shadow-[0_3px_0_0_#965f00] active:translate-y-0.5 active:shadow-[0_1px_0_0_#965f00] transition-all flex items-center justify-center gap-1"
+            >
+              <span>🪙</span>
+              <span>450 Coins</span>
+            </button>
+          </div>
+          <!-- Item 8: Buyable with Stars (Golden Math Crown) -->
+          <div
+            class="bg-surface-container-lowest rounded-DEFAULT p-space-sm flex flex-col justify-between shadow-sm relative overflow-hidden transition-all duration-200 hover:shadow-md"
+          >
+            <div class="absolute top-2 right-2">
+              <span
+                class="bg-secondary-fixed text-on-secondary-fixed font-label-badge text-[10px] px-1.5 py-0.5 rounded-full font-bold flex items-center gap-0.5"
+              >
+                <span class="material-symbols-outlined text-[11px]">lock</span>
+                Shop
+              </span>
+            </div>
+            <div
+              class="w-full h-24 bg-surface-container-low rounded-DEFAULT flex items-center justify-center p-2 mt-1"
+            >
+              <span
+                class="text-4xl filter drop-shadow-sm select-none transform hover:scale-110 transition-transform"
+                >👑</span
+              >
+            </div>
+            <div class="mt-space-xs">
+              <div class="flex items-center gap-1">
+                <span
+                  class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-label-badge text-[9px] px-1 rounded"
+                  >HAT</span
+                >
+                <span class="text-[10px] text-tertiary-container font-bold"
+                  >LEGENDARY</span
+                >
+              </div>
+              <h4
+                class="font-title-sm text-title-sm text-on-surface font-bold leading-tight mt-0.5 truncate"
+              >
+                Math Crown
+              </h4>
+            </div>
+            <button
+              class="w-full mt-2 py-1.5 rounded-full bg-secondary text-on-secondary font-title-sm text-[12px] font-bold shadow-[0_3px_0_0_#600037] active:translate-y-0.5 active:shadow-[0_1px_0_0_#600037] transition-all flex items-center justify-center gap-1"
+            >
+              <span>⭐</span>
+              <span>500 Stars</span>
+            </button>
+          </div>
+        </div>
+        <!-- Reward Store Banner Card -->
+        <div
+          class="w-full bg-gradient-to-r from-primary-fixed to-surface-variant rounded-DEFAULT p-space-md shadow-sm flex items-center justify-between gap-2 mb-space-md"
+        >
+          <div class="flex items-center gap-2.5">
+            <div
+              class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center shadow-sm text-xl"
+            >
+              🏬
+            </div>
+            <div class="flex flex-col">
+              <span
+                class="font-headline-md text-headline-md text-primary font-bold leading-tight"
+                >Need More Coins?</span
+              >
+              <span
+                class="font-body-sm text-body-sm text-on-surface-variant leading-tight"
+                >Solve math quests to earn 150+ coins today!</span
+              >
+            </div>
+          </div>
+          <a
+            class="px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-badge text-label-badge font-bold shadow-sm whitespace-nowrap"
+            href="#"
+          >
+            Solve Quests
+          </a>
+        </div>
+        <!-- Bottom Sticky Configuration Action Bar -->
+        <div
+          class="w-full bg-surface-container-lowest rounded-lg p-space-md shadow-lg flex flex-col gap-space-sm"
+        >
+          <!-- Equipped tags header -->
+          <div class="flex items-center justify-between">
+            <span
+              class="font-label-badge text-label-badge text-on-surface-variant tracking-wider uppercase font-bold"
+            >
+              Currently Equipped (3)
+            </span>
+            <button
+              class="font-label-badge text-label-badge text-secondary font-bold hover:underline"
+            >
+              Clear All
+            </button>
+          </div>
+          <!-- Equipped tags strip -->
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <div
+              class="flex items-center gap-1 bg-secondary-fixed/70 text-on-secondary-fixed px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm"
+            >
+              <span>🍓 Berry Beret</span>
+              <span
+                class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error"
+                >close</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-1 bg-primary-fixed/70 text-on-primary-fixed-variant px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm"
+            >
+              <span>🪽 Angel Wings</span>
+              <span
+                class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error"
+                >close</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-1 bg-tertiary-fixed/80 text-on-tertiary-fixed px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm"
+            >
+              <span>⭐ Star Wand</span>
+              <span
+                class="material-symbols-outlined text-[14px] cursor-pointer hover:text-error"
+                >close</span
+              >
+            </div>
+          </div>
+          <!-- Big Action Toy Button -->
+          <button
+            class="w-full py-3.5 rounded-full bg-secondary text-on-secondary font-headline-md text-headline-md font-extrabold shadow-[0_5px_0_0_#8c0053] active:translate-y-1 active:shadow-[0_2px_0_0_#8c0053] transition-all flex items-center justify-center gap-2 mt-1"
+            id="save-avatar-btn"
+          >
+            <span class="material-symbols-outlined text-[22px]"
+              >magic_button</span
+            >
+            <span>APPLY &amp; SAVE AVATAR</span>
+          </button>
+        </div>
+      </div>
+      <script>
+        ;(function () {
+          const rotateBtn = document.getElementById('btn-spin')
+          const avatarImg = document.getElementById('avatar-img')
+          const saveBtn = document.getElementById('save-avatar-btn')
+
+          let currentRotation = 0
+
+          if (rotateBtn && avatarImg) {
+            rotateBtn.addEventListener('click', function () {
+              currentRotation += 180
+              avatarImg.style.transform = `scale(1.05) rotateY(${currentRotation}deg)`
+            })
+          }
+
+          if (saveBtn) {
+            saveBtn.addEventListener('click', function () {
+              const originalText = saveBtn.innerHTML
+              saveBtn.innerHTML = `<span class="material-symbols-outlined text-[22px] animate-spin">sync</span><span>SAVING MAGIC...</span>`
+              saveBtn.classList.remove('bg-secondary')
+              saveBtn.classList.add('bg-emerald-600')
+
+              setTimeout(() => {
+                saveBtn.innerHTML = `<span class="material-symbols-outlined text-[22px]">check_circle</span><span>AVATAR SAVED! ✨</span>`
+                setTimeout(() => {
+                  saveBtn.innerHTML = originalText
+                  saveBtn.classList.remove('bg-emerald-600')
+                  saveBtn.classList.add('bg-secondary')
+                }, 2000)
+              }, 800)
+            })
+          }
+
+          const catPills = document.querySelectorAll('.cat-pill')
+          catPills.forEach((pill) => {
+            pill.addEventListener('click', () => {
+              catPills.forEach((p) => {
+                p.classList.remove('bg-primary', 'text-on-primary', 'shadow-md')
+                p.classList.add(
+                  'bg-surface-container-lowest',
+                  'text-on-surface',
+                  'shadow-sm',
+                )
+              })
+              pill.classList.remove(
+                'bg-surface-container-lowest',
+                'text-on-surface',
+                'shadow-sm',
+              )
+              pill.classList.add('bg-primary', 'text-on-primary', 'shadow-md')
+            })
+          })
+        })()
+      </script>
+    </main>
+    <nav
+      class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_16px_rgba(19,27,46,0.04)]"
+      data-active-classes="text-primary font-bold"
+    >
+      <div class="h-16 px-gutter flex items-center justify-around">
+        <a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="home"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">cottage</span
+          ><span class="font-label-badge text-label-badge mt-0.5">Home</span></a
+        ><a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="subjects"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">menu_book</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Subjects</span
+          ></a
+        ><a
+          aria-current="page"
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] transition-colors text-primary font-bold"
+          data-path="avatar-studio"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]">styler</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Avatar Studio</span
+          ></a
+        ><a
+          class="flex flex-col items-center justify-center min-w-[56px] min-h-[48px] text-on-surface-variant hover:text-on-surface transition-colors"
+          data-path="progress"
+          href="#"
+          ><span class="material-symbols-outlined text-[24px]"
+            >military_tech</span
+          ><span class="font-label-badge text-label-badge mt-0.5"
+            >Progress</span
+          ></a
+        >
+      </div>
+    </nav>
+  </body>
+</html>

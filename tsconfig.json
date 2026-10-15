@@ -12,6 +12,7 @@
     "declaration": true,
     "outDir": "dist",
     "lib": ["esnext", "dom"],
+    "jsx": "react-jsx",
     "typeRoots": ["node_modules/@types"],
     "types": ["node", "jest"],
     "resolveJsonModule": true,
@@ -28,5 +29,12 @@
     "*.config.cjs",
     "*.config.ts"
   ],
-  "exclude": ["eslint.config.ts"]
+  "exclude": [
+    "eslint.config.ts",
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/vite-env.d.ts",
+    "src/ui",
+    "src/styles"
+  ]
 }
