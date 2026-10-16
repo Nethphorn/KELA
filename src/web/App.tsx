@@ -12,7 +12,7 @@ import { dashboardData } from './data'
  * robot display rather than a responsive web page. The square scales down to
  * fit smaller viewports via `min()` while preserving its 1:1 aspect ratio.
  */
-export default function App(): React.JSX.Element {
+export function Dashboard(): React.JSX.Element {
   const data = dashboardData
 
   return (

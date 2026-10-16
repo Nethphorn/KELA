@@ -168,6 +168,7 @@ export default [
       '*.md',
       '.vscode/',
       'verify-render.cjs',
+      'verify-nav.cjs',
       'verify-preview.ps1',
     ],
   },

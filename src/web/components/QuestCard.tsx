@@ -1,45 +1,11 @@
-import type { Quest, QuestAccent } from '../data'
+import type { Quest } from '../data'
 import { CheckCircleIcon, MinusIcon, NumberGridIcon, PlusIcon } from './icons'
+import { useLessonLink } from './questCardNavigation'
+import type { AccentStyles } from './questCardStyles'
+import { accent } from './questCardStyles'
 
 interface QuestCardProps {
   readonly quest: Quest
-}
-
-interface AccentStyles {
-  bar: string
-  tileBg: string
-  tileText: string
-  unitText: string
-  statusPill: string
-  fractionText: string
-}
-
-/** Tailwind class maps keyed by the quest accent colour. */
-const accent: Record<QuestAccent, AccentStyles> = {
-  green: {
-    bar: 'bg-quest-green',
-    tileBg: 'bg-quest-green-soft',
-    tileText: 'text-quest-green',
-    unitText: 'text-quest-green',
-    statusPill: 'bg-quest-green-soft text-quest-green',
-    fractionText: 'text-quest-green',
-  },
-  blue: {
-    bar: 'bg-quest-blue',
-    tileBg: 'bg-quest-blue-soft',
-    tileText: 'text-quest-blue',
-    unitText: 'text-quest-blue',
-    statusPill: 'bg-quest-blue-soft text-quest-blue',
-    fractionText: 'text-quest-blue',
-  },
-  orange: {
-    bar: 'bg-quest-orange',
-    tileBg: 'bg-quest-orange-soft',
-    tileText: 'text-quest-orange',
-    unitText: 'text-quest-orange',
-    statusPill: 'bg-quest-orange-soft text-quest-orange',
-    fractionText: 'text-quest-orange',
-  },
 }
 
 function QuestTileIcon({
@@ -177,17 +143,18 @@ function QuestProgress({
   )
 }
 
-export function QuestCard({ quest }: QuestCardProps): React.JSX.Element {
-  const styles = accent[quest.accent]
-  const isCurrent = quest.status === 'current'
-
+/** The static inner content shared by clickable and plain quest cards. */
+function QuestCardBody({
+  quest,
+  styles,
+  hasLesson,
+}: {
+  readonly quest: Quest
+  readonly styles: AccentStyles
+  readonly hasLesson: boolean
+}): React.JSX.Element {
   return (
-    <article
-      className={`relative overflow-hidden rounded-2xl bg-white p-5 ${
-        isCurrent ? 'ring-2 ring-brand-blue/40' : 'ring-1 ring-black/5'
-      }`}
-    >
-      {/* "Current" ribbon */}
+    <>
       {quest.ribbonLabel !== undefined && (
         <div className="absolute right-0 top-0 flex items-center gap-1 rounded-bl-xl bg-gradient-to-r from-orange-400 to-orange-500 px-3 py-1.5 text-xs font-bold text-white">
           <span className="font-khmer">{quest.ribbonLabel}</span>
@@ -198,6 +165,32 @@ export function QuestCard({ quest }: QuestCardProps): React.JSX.Element {
       <QuestUnitRow quest={quest} styles={styles} />
       <QuestTitleBlock quest={quest} styles={styles} />
       <QuestProgress quest={quest} styles={styles} />
+
+      {hasLesson && (
+        <p className="mt-4 text-sm font-extrabold text-quest-orange font-khmer">
+          ចុចដើម្បីចាប់ផ្តើមមេរៀន • Tap to start lesson →
+        </p>
+      )}
+    </>
+  )
+}
+
+export function QuestCard({ quest }: QuestCardProps): React.JSX.Element {
+  const styles = accent[quest.accent]
+  const isCurrent = quest.status === 'current'
+  const { hasLesson, linkProps } = useLessonLink(quest.id)
+
+  const ring = isCurrent ? 'ring-2 ring-brand-blue/40' : 'ring-1 ring-black/5'
+  const clickable = hasLesson
+    ? 'cursor-pointer transition hover:-translate-y-0.5 hover:ring-2 hover:ring-quest-orange focus-within:ring-2 focus-within:ring-quest-orange'
+    : ''
+
+  return (
+    <article
+      className={`relative overflow-hidden rounded-2xl bg-white p-5 ${ring} ${clickable}`}
+      {...linkProps}
+    >
+      <QuestCardBody quest={quest} styles={styles} hasLesson={hasLesson} />
     </article>
   )
 }

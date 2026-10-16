@@ -1,0 +1,883 @@
+{
+  "chapter": {
+    "number": 3,
+    "titleKhmer": "វិធីបូក",
+    "titleLatin": "Addition",
+    "subjectKhmer": "មេរៀនទី៣",
+    "gradeLevel": "Primary (addition of large numbers up to 6 digits, properties, estimation, calculator)",
+    "source": "lessons3 screenshots (Cambodia MoEYS math textbook)",
+    "ocrNote": "Khmer text and all numeric/math content transcribed from images. Numbers and equations are verbatim; Khmer prose is best-effort transcription. Verify Khmer spelling before publishing."
+  },
+  "pages": [
+    {
+      "page": null,
+      "sourceImage": "Screenshot 2026-10-15 113246.png",
+      "sections": [
+        {
+          "type": "lesson_heading",
+          "textKhmer": "ការបូកចំនួនមានលេខ ៥ខ្ទង់ និង ៤ខ្ទង់",
+          "textLatin": "Adding a 5-digit number and a 4-digit number"
+        },
+        {
+          "type": "worked_problem",
+          "promptKhmer": "ឃ្លាំងទី១មួយដាក់ស្រូវបាន 56 590 បាវ ។ ឃ្លាំងទី២ពីរដាក់ស្រូវបាន 4 845 បាវ ។ តើស្រូវទាំងពីរឃ្លាំងមានចំនួនប៉ុន្មានបាវ ?",
+          "expression": "56 590 + 4 845 = ?",
+          "answer": 61435,
+          "operands": [56590, 4845]
+        },
+        {
+          "type": "column_addition_demo",
+          "layout": {
+            "carries": [1, 1, 1],
+            "addend1": [5, 6, 5, 9, 0],
+            "addend2": [null, 4, 8, 4, 5],
+            "sum": [6, 1, 4, 3, 5]
+          },
+          "stepsKhmer": [
+            "0 បូក 5 ស្មើនឹង 5 សរសេរលេខ 5 ។",
+            "9 បូក 4 ស្មើនឹង 13 សរសេរលេខ 3 ត្រាទុក 1 ។",
+            "1 បូក 5 ស្មើនឹង 6 ហើយ 6 បូក 8 ស្មើនឹង 14 ។ សរសេរលេខ 4 ត្រាទុក 1 ។",
+            "1 បូក 6 ស្មើនឹង 7 ហើយ 7 បូក 4 ស្មើនឹង 11 សរសេរលេខ 1 ត្រាទុក 1 ។",
+            "1 បូក 5 ស្មើនឹង 6 សរសេរលេខ 6 ។"
+          ],
+          "conclusionKhmer": "ដូចនេះ ស្រូវទាំងពីរឃ្លាំងមានចំនួន 61 435 បាវ ។"
+        }
+      ]
+    },
+    {
+      "page": null,
+      "sourceImage": "Screenshot 2026-10-15 113555.png",
+      "sections": [
+        {
+          "type": "worked_problem",
+          "headingKhmer": "ការបង្កើតចំណោទ",
+          "headingLatin": "Creating a word problem",
+          "expression": "54 300 + 4 800 = ?",
+          "answer": 59100,
+          "operands": [54300, 4800],
+          "promptKhmer": "យើងអាចបង្កើតចំណោទ ដែលទាក់ទងនឹងល្បះលេខនេះដូចខាងក្រោម ។ ពូម៉ៅទិញអាវមួយថ្លៃ 54 300 រៀល ហើយមីងសារីទិញស្បែកជើងមួយគូថ្លៃ 4 800 រៀល ។ តើអ្នកទាំងពីរទិញអស់ប្រាក់ប៉ុន្មាន ?"
+        },
+        {
+          "type": "exercise_group",
+          "headingKhmer": "លំហាត់",
+          "exercises": [
+            {
+              "number": 1,
+              "instructionKhmer": "ចូររកផលបូក",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "54 210 + 3 058",
+                  "operands": [54210, 3058]
+                },
+                {
+                  "label": "ខ",
+                  "expression": "26 105 + 1 352",
+                  "operands": [26105, 1352]
+                },
+                {
+                  "label": "គ",
+                  "expression": "81 754 + 4 126",
+                  "operands": [81754, 4126]
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "73 642 + 2 387",
+                  "operands": [73642, 2387]
+                },
+                {
+                  "label": "ង",
+                  "expression": "63 790 + 4 568",
+                  "operands": [63790, 4568]
+                },
+                {
+                  "label": "ច",
+                  "expression": "70 856 + 3 476",
+                  "operands": [70856, 3476]
+                },
+                {
+                  "label": "ឆ",
+                  "expression": "58 640 + 1 978",
+                  "operands": [58640, 1978]
+                },
+                {
+                  "label": "ជ",
+                  "expression": "86 408 + 5 678",
+                  "operands": [86408, 5678]
+                },
+                {
+                  "label": "ឈ",
+                  "expression": "20 548 + 5 420",
+                  "operands": [20548, 5420]
+                },
+                {
+                  "label": "ញ",
+                  "expression": "46 370 + 2 465",
+                  "operands": [46370, 2465]
+                },
+                {
+                  "label": "ដ",
+                  "expression": "15 706 + 6 756",
+                  "operands": [15706, 6756]
+                },
+                {
+                  "label": "ឋ",
+                  "expression": "76 245 + 6 589",
+                  "operands": [76245, 6589]
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "instructionKhmer": "ចូរបំពេញ □",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "35 250 + 1 353 = □",
+                  "answer": 36603
+                },
+                {
+                  "label": "ខ",
+                  "expression": "81 200 + 4 850 = □",
+                  "answer": 86050
+                },
+                {
+                  "label": "គ",
+                  "expression": "□ + 5 650 = 92 310",
+                  "answer": 86660
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "□ + 8 250 = 25 150",
+                  "answer": 16900
+                },
+                {
+                  "label": "ង",
+                  "expression": "67 120 + □ = 73 250",
+                  "answer": 6130
+                },
+                {
+                  "label": "ច",
+                  "expression": "52 380 + □ = 59 210",
+                  "answer": 6830
+                }
+              ]
+            },
+            {
+              "number": 3,
+              "instructionKhmer": "មុខគណនា",
+              "note": "Pencil-arrow mental-math chain",
+              "items": [
+                { "label": "ក", "expression": "25 150 + 50", "answer": 25200 },
+                { "label": "ខ", "expression": "32 560 + 40", "answer": 32600 },
+                { "label": "គ", "expression": "51 500 + 300", "answer": 51800 }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "sourceImage": "Screenshot 2026-10-15 113607.png (left)",
+      "sections": [
+        {
+          "type": "exercise_group",
+          "headingKhmer": "ចំណោទ",
+          "headingLatin": "Word problems",
+          "exercises": [
+            {
+              "number": 1,
+              "promptKhmer": "គ្រួសារកសិករម្នាក់ដាក់ប្រមូលផលដំឡូងមីចម្ការទី 1 បាន 25 335kg និងចម្ការទី 2 បាន 9 560kg ។ តើគ្រួសារកសិករនោះប្រមូលផលដំឡូងមីទាំងអស់បានប៉ុន្មានគីឡូក្រាម ?",
+              "operands": [25335, 9560],
+              "answer": 34895,
+              "unit": "kg"
+            },
+            {
+              "number": 2,
+              "promptKhmer": "ឡុតនេសាទមួយប្រមូលផលត្រីនៅខែវិច្ឆិកាបាន 28 700kg ហើយនៅខែធ្នូ គេប្រមូលផលបាន 3 525kg ច្រើនជាងខែវិច្ឆិកា ។ តើនៅខែធ្នូ ឡុតនេសាទនោះប្រមូលផលត្រីបានប៉ុន្មានគីឡូក្រាម ?",
+              "operands": [28700, 3525],
+              "answer": 32225,
+              "unit": "kg"
+            },
+            {
+              "number": 3,
+              "instructionKhmer": "ចូរបង្កើតចំណោទ",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "35 800 + 1 820 = □",
+                  "answer": 37620
+                },
+                {
+                  "label": "ខ",
+                  "expression": "63 400 + 4 650 = □",
+                  "answer": 68050
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lesson_heading",
+          "textKhmer": "ការបូកចំនួនមានលេខ ៥ខ្ទង់ និង ៥ខ្ទង់",
+          "textLatin": "Adding a 5-digit number and a 5-digit number"
+        },
+        {
+          "type": "worked_problem",
+          "promptKhmer": "សិប្បកម្មផលិតដុំមួយកន្លែងផលិតដុំសាប៉ូសប្តាហ៍ទី 1 បាន 35 250 ដុំ សប្តាហ៍ទី 2 បាន 33 850 ដុំ ។ តើក្នុង 2 សប្តាហ៍សិប្បកម្មនោះផលិតដុំបានប៉ុន្មានដុំ ?",
+          "expression": "35 250 + 33 850 = ?",
+          "operands": [35250, 33850],
+          "answer": 69100
+        },
+        {
+          "type": "column_addition_demo",
+          "layout": {
+            "carries": [null, 1, 1, null, null],
+            "addend1": [3, 5, 2, 5, 0],
+            "addend2": [3, 3, 8, 5, 0],
+            "sum": [6, 9, 1, 0, 0]
+          },
+          "stepsKhmer": [
+            "0 បូក 0 ស្មើនឹង 0 សរសេរលេខ 0 ។",
+            "5 បូក 5 ស្មើនឹង 10 សរសេរលេខ 0 ត្រាទុក 1 ។",
+            "1 បូក 2 ស្មើនឹង 3 ហើយ 3 បូក 8 ស្មើនឹង 11 សរសេរលេខ 1 ត្រាទុក 1 ។",
+            "1 បូក 5 ស្មើនឹង 6 ហើយ 6 បូក 3 ស្មើនឹង 9 សរសេរលេខ 9 ។",
+            "3 បូក 3 ស្មើនឹង 6 សរសេរលេខ 6 ។"
+          ],
+          "conclusionKhmer": "ដូចនេះ ក្នុង 2 សប្តាហ៍សិប្បកម្មនោះផលិតដុំបាន 69 100 ដុំ ។"
+        }
+      ]
+    },
+    {
+      "page": 16,
+      "sourceImage": "Screenshot 2026-10-15 113607.png (right)",
+      "sections": [
+        {
+          "type": "worked_problem",
+          "headingKhmer": "ការបង្កើតចំណោទ",
+          "headingLatin": "Creating a word problem",
+          "expression": "15 253 + 19 770 = ?",
+          "operands": [15253, 19770],
+          "answer": 35023,
+          "promptKhmer": "ម្ចាស់ លក់ឌីស្គីកឆ្នាំមុនបាន 15 253 ផ្ទៃ និងឆ្នាំនេះបាន 19 770 ផ្ទៃ ។ តើម្ចាស់ លក់ឌីស្គីកទាំងអស់បានប៉ុន្មានផ្ទៃ ?"
+        },
+        {
+          "type": "exercise_group",
+          "headingKhmer": "លំហាត់",
+          "exercises": [
+            {
+              "number": 1,
+              "instructionKhmer": "ចូររកផលបូក",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "23 045 + 16 540",
+                  "operands": [23045, 16540]
+                },
+                {
+                  "label": "ខ",
+                  "expression": "31 253 + 25 124",
+                  "operands": [31253, 25124]
+                },
+                {
+                  "label": "គ",
+                  "expression": "48 055 + 51 723",
+                  "operands": [48055, 51723]
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "38 746 + 10 215",
+                  "operands": [38746, 10215]
+                },
+                {
+                  "label": "ង",
+                  "expression": "52 443 + 38 523",
+                  "operands": [52443, 38523]
+                },
+                {
+                  "label": "ច",
+                  "expression": "67 259 + 21 253",
+                  "operands": [67259, 21253]
+                },
+                {
+                  "label": "ឆ",
+                  "expression": "79 153 + 31 978",
+                  "operands": [79153, 31978]
+                },
+                {
+                  "label": "ជ",
+                  "expression": "68 735 + 36 846",
+                  "operands": [68735, 36846]
+                },
+                {
+                  "label": "ឈ",
+                  "expression": "64 521 + 32 583",
+                  "operands": [64521, 32583]
+                },
+                {
+                  "label": "ញ",
+                  "expression": "80 295 + 13 876",
+                  "operands": [80295, 13876]
+                },
+                {
+                  "label": "ដ",
+                  "expression": "48 651 + 37 528",
+                  "operands": [48651, 37528]
+                },
+                {
+                  "label": "ឋ",
+                  "expression": "52 387 + 38 756",
+                  "operands": [52387, 38756]
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "instructionKhmer": "ចូរបំពេញ □",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "35 320 + 26 750 = □",
+                  "answer": 62070
+                },
+                {
+                  "label": "ខ",
+                  "expression": "25 640 + □ = 25 840",
+                  "answer": 200
+                },
+                {
+                  "label": "គ",
+                  "expression": "□ + 3 500 = 73 500",
+                  "answer": 70000
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "□ + 2 400 = 32 500",
+                  "answer": 30100
+                }
+              ]
+            },
+            {
+              "number": 3,
+              "instructionKhmer": "ចូរបំពេញ □ លើបន្ទាត់លេខខាងក្រោម",
+              "note": "Number lines",
+              "items": [
+                {
+                  "label": "ក",
+                  "sequenceKnown": [25705, 25905, 26005, 26305],
+                  "step": 100,
+                  "note": "fill the two empty boxes between the shown values"
+                },
+                {
+                  "label": "ខ",
+                  "sequenceKnown": [31000, 33000, 37000],
+                  "step": 2000,
+                  "note": "fill the empty boxes"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 17,
+      "sourceImage": "Screenshot 2026-10-15 113617.png (left)",
+      "sections": [
+        {
+          "type": "exercise_group",
+          "headingKhmer": "ចំណោទ",
+          "exercises": [
+            {
+              "number": 1,
+              "promptKhmer": "ក្រុមហ៊ុនមួយកម្ម៉ូតូ នៅឆ្នាំ 2009 បាន 15 850 គ្រឿង និងឆ្នាំ 2010 បាន 765 គ្រឿងច្រើនជាងឆ្នាំ 2009 ។ តើក្រុមហ៊ុននោះលក់ម៉ូតូទាំង 2 ឆ្នាំបានប៉ុន្មានគ្រឿង ?",
+              "note": "2010 = 15 850 + 765 = 16 615; total = 15 850 + 16 615 = 32 465",
+              "answer": 32465
+            },
+            {
+              "number": 2,
+              "promptKhmer": "កសិដ្ឋានមួយលក់ស៊ុតមាន់ ខែមករាបាន 25 435 គ្រាប់ និងខែកុម្ភៈបាន 2 675 គ្រាប់លើសខែមករា ។ តើកសិដ្ឋាននោះលក់ស៊ុតមាន់ទាំងអស់បានប៉ុន្មានគ្រាប់ ?",
+              "note": "Feb = 25 435 + 2 675 = 28 110; total = 25 435 + 28 110 = 53 545",
+              "answer": 53545
+            },
+            {
+              "number": 3,
+              "instructionKhmer": "ចូរបង្កើតចំណោទ",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "25 350 + 52 390 = □",
+                  "answer": 77740
+                },
+                {
+                  "label": "ខ",
+                  "expression": "35 790 + 18 630 = □",
+                  "answer": 54420
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "lesson_heading",
+          "textKhmer": "ការបូកចំនួនមានភ្នួកបូកច្រើន",
+          "textLatin": "Adding numbers with several addends"
+        },
+        {
+          "type": "worked_problem",
+          "promptKhmer": "ស្ថានីយប្រេងមួយ លក់ប្រេងថ្ងៃទី 1 បាន 14 365ℓ ថ្ងៃទី 2 បាន 21 624ℓ ថ្ងៃទី 3 បាន 9 300ℓ និងថ្ងៃទី 4 បាន 9 572ℓ ។ តើទាំង 4 ថ្ងៃ ស្ថានីយលក់ប្រេងបានប៉ុន្មានលីត្រ ?",
+          "expression": "14 365 + 21 624 + 9 300 + 9 572 = ?",
+          "operands": [14365, 21624, 9300, 9572],
+          "answer": 54861,
+          "unit": "ℓ"
+        },
+        {
+          "type": "column_addition_demo",
+          "layout": {
+            "carries": [2, 1, 1, 1, null],
+            "addend1": [1, 4, 3, 6, 5],
+            "addend2": [2, 1, 6, 2, 4],
+            "addend3": [null, 9, 3, 0, 0],
+            "addend4": [null, 9, 5, 7, 2],
+            "sum": [5, 4, 8, 6, 1]
+          },
+          "stepsKhmer": [
+            "5 បូក 4 បូក 0 បូក 2 ស្មើនឹង 11 សរសេរលេខ 1 ត្រាទុក 1 ។",
+            "1 បូក 6 បូក 2 បូក 0 បូក 7 ស្មើនឹង 16 សរសេរលេខ 6 ត្រាទុក 1 ។",
+            "1 បូក 3 បូក 6 បូក 3 បូក 5 ស្មើនឹង 18 សរសេរលេខ 8 ត្រាទុក 1 ។",
+            "1 បូក 4 បូក 1 បូក 9 បូក 9 ស្មើនឹង 24 សរសេរលេខ 4 ត្រាទុក 2 ។",
+            "2 បូក 1 បូក 2 ស្មើនឹង 5 សរសេរលេខ 5 ។"
+          ],
+          "conclusionKhmer": "ដូចនេះ ទាំង 4 ថ្ងៃ ស្ថានីយប្រេងនោះលក់ប្រេងបាន 54 861ℓ ។"
+        }
+      ]
+    },
+    {
+      "page": 18,
+      "sourceImage": "Screenshot 2026-10-15 113617.png (right)",
+      "sections": [
+        {
+          "type": "worked_problem",
+          "headingKhmer": "ការបង្កើតចំណោទ",
+          "expression": "82 560 + 74 870 + 67 765 = ?",
+          "operands": [82560, 74870, 67765],
+          "answer": 225195,
+          "promptKhmer": "ម្ចាស់ដើរចម្ងាយបាន 82 560m ម៉ែនដើរចម្ងាយបាន 74 870m និងស៊ីជាដើរចម្ងាយបាន 67 765m ។ គណនាចម្ងាយសរុបដែលអ្នកទាំងបីដើរបាន ។"
+        },
+        {
+          "type": "exercise_group",
+          "headingKhmer": "លំហាត់",
+          "exercises": [
+            {
+              "number": 1,
+              "instructionKhmer": "ចូរគណនា",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "16 030 + 23 401 + 825 + 92",
+                  "operands": [16030, 23401, 825, 92]
+                },
+                {
+                  "label": "ខ",
+                  "expression": "1 890 + 6 521 + 87 + 62",
+                  "operands": [1890, 6521, 87, 62]
+                },
+                {
+                  "label": "គ",
+                  "expression": "15 203 + 23 605 + 63 081 + 750",
+                  "operands": [15203, 23605, 63081, 750]
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "32 080 + 25 160 + 42 107 + 95",
+                  "operands": [32080, 25160, 42107, 95]
+                },
+                {
+                  "label": "ង",
+                  "expression": "1 375 + 842 + 640 + 7 286",
+                  "operands": [1375, 842, 640, 7286]
+                },
+                {
+                  "label": "ច",
+                  "expression": "2 351 + 92 + 1 895 + 180 + 17",
+                  "operands": [2351, 92, 1895, 180, 17]
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "instructionKhmer": "ចូររកចម្ងាយផ្លូវពីចំណោទ ក ទៅចំណោទ ឃ",
+              "note": "Map/route problem. Segments: ក→ខ = 5 572 m, ខ→គ = 3 880 m, គ→ឃ = 5 650 m. Total = 15 102 m.",
+              "segments": [
+                { "from": "ក", "to": "ខ", "distance": 5572, "unit": "m" },
+                { "from": "ខ", "to": "គ", "distance": 3880, "unit": "m" },
+                { "from": "គ", "to": "ឃ", "distance": 5650, "unit": "m" }
+              ],
+              "answer": 15102
+            }
+          ]
+        },
+        {
+          "type": "exercise_group",
+          "headingKhmer": "ចំណោទ",
+          "exercises": [
+            {
+              "number": 1,
+              "promptKhmer": "ម្ចាស់សុភីទិញសំលៀកបំពាក់ 1 សម្រាប់អស់ប្រាក់ 25 800 រ ទិញស្បែកជើង 1 គូអស់ប្រាក់ 3 200 រ ទិញអាវុង 1 អស់ប្រាក់ 7 600 រ និងទិញពោតស្វាយ 1 ចង្កោមអស់ប្រាក់ 2 300 រ ។ តើម្ចាស់សុភីទិញអស់ប៉ុន្មានរៀល ?",
+              "operands": [25800, 3200, 7600, 2300],
+              "answer": 38900,
+              "unit": "រៀល (riel)"
+            },
+            {
+              "number": 2,
+              "promptKhmer": "ចម្ការទី 1 ផ្តល់ផលពោតបាន 2 500kg ចម្ការទី 2 ផ្តល់ផលពោតបាន 350kg លើសចម្ការទី 1 ។ ចម្ការទី 3 ផ្តល់ផលពោតបាន 1 250kg លើសចម្ការទី 1 ។ តើចម្ការទាំង 3 ផ្តល់ផលពោតបានប៉ុន្មានគីឡូក្រាម ?",
+              "note": "ទី2 = 2 500 + 350 = 2 850; ទី3 = 2 500 + 1 250 = 3 750; total = 2 500 + 2 850 + 3 750 = 9 100",
+              "answer": 9100,
+              "unit": "kg"
+            },
+            {
+              "number": 3,
+              "instructionKhmer": "ចូរបង្កើតចំណោទ",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "35 000 + 21 300 + 60 000 = □",
+                  "answer": 116300
+                },
+                {
+                  "label": "ខ",
+                  "expression": "42 600 + 18 200 + 79 760 = □",
+                  "answer": 140560
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 19,
+      "sourceImage": "Screenshot 2026-10-15 113629.png (left)",
+      "sections": [
+        {
+          "type": "lesson_heading",
+          "textKhmer": "លក្ខណៈនៃវិធីបូក",
+          "textLatin": "Properties of addition"
+        },
+        {
+          "type": "property",
+          "labelKhmer": "ក. លក្ខណៈត្រឡប់",
+          "labelLatin": "Commutative property",
+          "exampleKhmer": "ប្រៀបធៀប : 35 + 20 និង 20 + 35",
+          "worked": "35 + 20 = 55 និង 20 + 35 = 55",
+          "conclusionKhmer": "ដូចនេះ 35 + 20 = 20 + 35 ។",
+          "ruleKhmer": "បើគេបូរលំដាប់គ្នាបូក ផលបូកនៅដដែល ។"
+        },
+        {
+          "type": "property",
+          "labelKhmer": "ខ. លក្ខណៈផ្គុំ",
+          "labelLatin": "Associative property",
+          "examples": [
+            {
+              "expression": "25 + 15 + 20 = □",
+              "worked": "(25 + 15) + 20 = 40 + 20 = 60 ឬ 25 + (15 + 20) = 25 + 35 = 60",
+              "conclusionKhmer": "ដូចនេះ (25 + 15) + 20 = 25 + (15 + 20) ។",
+              "answer": 60
+            },
+            {
+              "expression": "28 + 49 + 51 = □",
+              "worked": "(28 + 49) + 51 = 77 + 51 = 128 ឬ 28 + (49 + 51) = 28 + 100 = 128",
+              "conclusionKhmer": "ដូចនេះ (28 + 49) + 51 = 28 + (49 + 51) ។",
+              "answer": 128
+            }
+          ],
+          "ruleKhmer": "ក្នុងវិធីបូក កាលណាមានភ្នួកបូកច្រើន គេអាចផ្គុំបូកណាមួយជាមួយនឹងភ្នួកបូកផ្សេងទៀត ។"
+        },
+        {
+          "type": "property",
+          "labelKhmer": "គ. ការបូកនឹងសូន្យ",
+          "labelLatin": "Adding zero (identity element)",
+          "examples": ["15 + 0 = 15", "32 + 0 = 32"],
+          "ruleKhmer": "មួយចំនួនបូកនឹងសូន្យ ផលបូកស្មើនឹងមួយចំនួននោះ ។"
+        }
+      ]
+    },
+    {
+      "page": 20,
+      "sourceImage": "Screenshot 2026-10-15 113629.png (right)",
+      "sections": [
+        {
+          "type": "exercise_group",
+          "headingKhmer": "លំហាត់",
+          "exercises": [
+            {
+              "number": 1,
+              "instructionKhmer": "ចូរបំពេញ □",
+              "note": "Commutative property: fill in the missing addend",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "28 645 + 8 150 = 8 150 + □",
+                  "answer": 28645
+                },
+                {
+                  "label": "ខ",
+                  "expression": "68 410 + 7 652 = 7 652 + □",
+                  "answer": 68410
+                },
+                {
+                  "label": "គ",
+                  "expression": "75 234 + 28 190 = 28 190 + □",
+                  "answer": 75234
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "59 384 + 37 258 = 37 258 + □",
+                  "answer": 59384
+                },
+                {
+                  "label": "ង",
+                  "expression": "68 079 + 26 540 = 26 540 + □",
+                  "answer": 68079
+                },
+                {
+                  "label": "ច",
+                  "expression": "42 905 + 38 526 = 38 526 + □",
+                  "answer": 42905
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "instructionKhmer": "ចូរគណនា រួចជ្រើសរើសការផ្គុំណាដែលស្រួលជាងគេដោយ ✓",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "32 + 26 + 18 + 37 + 24 = □",
+                  "answer": 137,
+                  "groupings": [
+                    "(32 + 26) + (18 + 37) + 24 =",
+                    "(32 + 18) + (26 + 37) + 24 =",
+                    "(26 + 18) + (32 + 37) + 24 =",
+                    "(26 + 24) + (32 + 18) + 37 ="
+                  ]
+                },
+                {
+                  "label": "ខ",
+                  "expression": "45 + 51 + 55 + 49 + 12 = □",
+                  "answer": 212,
+                  "groupings": [
+                    "(45 + 51) + (55 + 49) + 12 =",
+                    "(45 + 55) + (51 + 49) + 12 =",
+                    "(51 + 55) + (45 + 49) + 12 =",
+                    "(45 + 55) + (51 + 12) + 49 ="
+                  ]
+                }
+              ]
+            },
+            {
+              "number": 3,
+              "instructionKhmer": "ចូរបំពេញ □",
+              "note": "Identity element with zero",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "35 600 + □ = 35 600",
+                  "answer": 0
+                },
+                {
+                  "label": "ខ",
+                  "expression": "□ + 75 458 = 75 458",
+                  "answer": 0
+                },
+                {
+                  "label": "គ",
+                  "expression": "□ + 0 = 52 836",
+                  "answer": 52836
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "0 + 80 356 = □",
+                  "answer": 80356
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 21,
+      "sourceImage": "Screenshot 2026-10-15 113637.png (left)",
+      "sections": [
+        {
+          "type": "lesson_heading",
+          "textKhmer": "ការគណនាផលបូកដោយប្រើម៉ាស៊ីនគិតលេខ",
+          "textLatin": "Computing sums using a calculator"
+        },
+        {
+          "type": "worked_problem",
+          "introKhmer": "ម៉ាស៊ីនគិតលេខជាឧបករណ៍សម្រាប់ជួយយើងក្នុងការគណនាបានឆាប់រហ័ស ។",
+          "exampleKhmer": "ឧទាហរណ៍ : គណនាផលបូកនៃ 32 871 + 25 760 + 4 752 = □ ។",
+          "expression": "32 871 + 25 760 + 4 752 = ?",
+          "operands": [32871, 25760, 4752],
+          "answer": 63383,
+          "methodKhmer": "វិធីប្រើ : យើងចុចលេខ តាមគំរូខាងស្តាំ ។ ដូចនេះ លេខ \"63 383\" បង្ហាញនៅលើកញ្ចក់ម៉ាស៊ីនគិតលេខ គឺជាផលបូក ។"
+        },
+        {
+          "type": "exercise_group",
+          "headingKhmer": "លំហាត់",
+          "exercises": [
+            {
+              "number": 1,
+              "instructionKhmer": "ចូរគណនាផលបូកដោយប្រើម៉ាស៊ីនគិតលេខ",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "23 706 + 19 205 + 32 871",
+                  "operands": [23706, 19205, 32871]
+                },
+                {
+                  "label": "ខ",
+                  "expression": "4 218 + 70 315 + 5 216 + 6 035",
+                  "operands": [4218, 70315, 5216, 6035]
+                },
+                {
+                  "label": "គ",
+                  "expression": "72 103 + 1 520 + 4 263 + 7 031",
+                  "operands": [72103, 1520, 4263, 7031]
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "831 + 4 251 + 7 305 + 9 213 + 5 215",
+                  "operands": [831, 4251, 7305, 9213, 5215]
+                },
+                {
+                  "label": "ង",
+                  "expression": "5 031 + 8 256 + 6 429 + 189 + 56",
+                  "operands": [5031, 8256, 6429, 189, 56]
+                },
+                {
+                  "label": "ច",
+                  "expression": "2 305 + 7 102 + 63 210 + 69 525 + 318",
+                  "operands": [2305, 7102, 63210, 69525, 318]
+                },
+                {
+                  "label": "ឆ",
+                  "expression": "1 970 + 521 + 8 571 + 92 035 + 78 123",
+                  "operands": [1970, 521, 8571, 92035, 78123]
+                },
+                {
+                  "label": "ជ",
+                  "expression": "8 032 + 61 + 8 256 + 72 518 + 51 972",
+                  "operands": [8032, 61, 8256, 72518, 51972]
+                },
+                {
+                  "label": "ឈ",
+                  "expression": "1 297 + 21 400 + 53 021 + 4 949",
+                  "operands": [1297, 21400, 53021, 4949]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "page": 22,
+      "sourceImage": "Screenshot 2026-10-15 113637.png (right)",
+      "sections": [
+        {
+          "type": "lesson_heading",
+          "textKhmer": "ការបា៉ន់ស្មានផលបូក",
+          "textLatin": "Estimating sums (rounding)"
+        },
+        {
+          "type": "worked_problem",
+          "promptKhmer": "ឡុតនេសាទមួយប្រមូលផលត្រីនៅខែមករាបាន 42 565kg និងនៅខែកុម្ភៈបាន 58 650kg ។ តើទាំង 2 ខែ ឡុតនេសាទនោះប្រមូលផលត្រីបានប្រហែលប៉ុន្មាន ?",
+          "expression": "42 565 + 58 650 ≈ ?",
+          "operands": [42565, 58650],
+          "estimate": 100000,
+          "exactAnswer": 101215,
+          "roundingKhmer": "នៅគ្រប់ទី 1 ខ្ទង់ពាន់មានលេខ 2 ។ ដូចនេះយើងបង្គត់ចុះទៅ 40 000 ។ នៅគ្រប់ទី 2 ខ្ទង់ពាន់មានលេខ 8 ។ ដូចនេះយើងបង្គត់ឡើងទៅ 60 000 ។",
+          "roundedAddition": "40 000 + 60 000 = 100 000",
+          "conclusionKhmer": "ដូចនេះ ឡុតនេសាទនោះប្រមូលផលត្រីទាំង 2 ខែបានប្រហែល 100 000 kg ។",
+          "ruleKhmer": "ដើម្បីបា៉ន់ស្មានផលបូក យើងត្រូវបង្គត់ភ្នួកបូកនីមួយៗត្រឹមខ្ទង់ធំបំផុត រួចធ្វើប្រមាណវិធីបូក ។"
+        },
+        {
+          "type": "exercise_group",
+          "headingKhmer": "លំហាត់",
+          "exercises": [
+            {
+              "number": 1,
+              "instructionKhmer": "ចូរបា៉ន់ស្មានផលបូក",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "19 250 + 38 768",
+                  "operands": [19250, 38768]
+                },
+                {
+                  "label": "ខ",
+                  "expression": "63 075 + 36 920",
+                  "operands": [63075, 36920]
+                },
+                {
+                  "label": "គ",
+                  "expression": "47 453 + 9 258",
+                  "operands": [47453, 9258]
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "89 321 + 8 350",
+                  "operands": [89321, 8350]
+                }
+              ]
+            },
+            {
+              "number": 2,
+              "instructionKhmer": "ចូររកតម្លៃប្រហែល",
+              "items": [
+                {
+                  "label": "ក",
+                  "expression": "28 053 + 61 320 ≈ □",
+                  "operands": [28053, 61320]
+                },
+                {
+                  "label": "ខ",
+                  "expression": "65 160 + 32 164 ≈ □",
+                  "operands": [65160, 32164]
+                },
+                {
+                  "label": "គ",
+                  "expression": "70 932 + 4 921 ≈ □",
+                  "operands": [70932, 4921]
+                },
+                {
+                  "label": "ឃ",
+                  "expression": "42 518 + 9 832 ≈ □",
+                  "operands": [42518, 9832]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "exercise_group",
+          "headingKhmer": "ចំណោទ",
+          "exercises": [
+            {
+              "number": 1,
+              "promptKhmer": "ម្ចាស់សុផលទិញស្បែកជើង 1 គូអស់ប្រាក់ 23 400 រ កាតាប 1 អស់ប្រាក់ 38 500 រ និងទឹកដោះគោ 2 កំប៉ុងអស់ប្រាក់ 8 300 រ ។ តើម្ចាស់សុផលទិញណាយប្រាក់អស់ប្រហែលប៉ុន្មានរៀល ?",
+              "operands": [23400, 38500, 8300],
+              "exactAnswer": 70200,
+              "unit": "រៀល (riel)",
+              "note": "This is an estimation (ប្រហែល) problem"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
