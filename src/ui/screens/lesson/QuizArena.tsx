@@ -8,6 +8,8 @@ interface QuizArenaProps {
   readonly selected: string | null
   readonly onSelect: (choice: string) => void
   readonly onNext: () => void
+  readonly onHint: () => void
+  readonly onReadAloud: () => void
   readonly isLast: boolean
 }
 
@@ -45,7 +47,7 @@ function resolveState(
 function ChoiceButton({ label, state, disabled, onSelect }: ChoiceButtonProps) {
   return (
     <button
-      className={`w-full rounded-2xl px-4 py-3 text-left text-title-sm font-semibold shadow-sm transition-all active:scale-[0.99] disabled:cursor-default ${CHOICE_STYLE[state]}`}
+      className={`flex min-h-[64px] w-full items-center justify-center rounded-2xl px-4 py-4 text-center text-headline-md font-semibold shadow-sm transition-all active:scale-[0.99] disabled:cursor-default ${CHOICE_STYLE[state]}`}
       disabled={disabled}
       onClick={onSelect}
       type="button"
@@ -63,7 +65,7 @@ interface ChoiceListProps {
 
 function ChoiceList({ question, selected, onSelect }: ChoiceListProps) {
   return (
-    <div className="flex w-full max-w-sm flex-col gap-space-xs">
+    <div className="grid w-full grid-cols-2 gap-space-sm">
       {question.choices.map((choice) => (
         <ChoiceButton
           key={choice}
@@ -129,11 +131,42 @@ function ArenaBadge() {
   )
 }
 
+interface ArenaActionsProps {
+  readonly onHint: () => void
+  readonly onReadAloud: () => void
+}
+
+/** Hint + read-aloud controls anchored to the bottom of the arena card. */
+function ArenaActions({ onHint, onReadAloud }: ArenaActionsProps) {
+  return (
+    <div className="flex w-full items-center gap-space-xs border-t border-outline-variant/40 pt-space-md">
+      <button
+        className="flex flex-1 items-center justify-center gap-1 rounded-full bg-surface-container px-3 py-2 text-title-sm text-on-surface transition-all hover:bg-surface-container-high active:scale-95"
+        onClick={onHint}
+        type="button"
+      >
+        <MaterialIcon className="text-[18px] text-tertiary" name="lightbulb" />
+        <span>សុំជំនួយ (Hint)</span>
+      </button>
+      <button
+        className="flex flex-1 items-center justify-center gap-1 rounded-full bg-primary-fixed px-3 py-2 text-title-sm text-on-primary-fixed transition-all hover:bg-primary-fixed-dim active:scale-95"
+        onClick={onReadAloud}
+        type="button"
+      >
+        <MaterialIcon className="text-[18px] text-primary" name="volume_up" />
+        <span>អានជាសំឡេង</span>
+      </button>
+    </div>
+  )
+}
+
 export function QuizArena({
   question,
   selected,
   onSelect,
   onNext,
+  onHint,
+  onReadAloud,
   isLast,
 }: QuizArenaProps) {
   const answered = selected !== null
@@ -147,6 +180,7 @@ export function QuizArena({
       <ChoiceList question={question} selected={selected} onSelect={onSelect} />
       {answered ? <FeedbackRow correct={selected === question.answer} /> : null}
       <NextButton disabled={!answered} isLast={isLast} onNext={onNext} />
+      <ArenaActions onHint={onHint} onReadAloud={onReadAloud} />
     </div>
   )
 }

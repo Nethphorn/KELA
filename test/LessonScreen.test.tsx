@@ -21,6 +21,12 @@ describe('LessonScreen', () => {
     expect(screen.getByText(/Choose the answer/)).toBeTruthy()
   })
 
+  it('renders the lesson 3 addition quiz from data', () => {
+    renderLesson('/lesson/3')
+
+    expect(screen.getByText(/Choose the answer/)).toBeTruthy()
+  })
+
   it('falls back to the hardcoded lesson for unknown ids', () => {
     renderLesson('/lesson/99')
 

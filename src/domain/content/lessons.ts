@@ -1,4 +1,5 @@
 import rawLesson2 from '../../data/lessons/lesson_2.json'
+import rawLesson3 from '../../data/lessons/lesson_3.json'
 import type { LessonQuiz, QuizQuestion } from '../types-quiz'
 
 function asRecord(value: unknown): Record<string, unknown> | null {
@@ -99,7 +100,10 @@ function parseLesson(value: unknown): LessonQuiz {
   return { lessonId, title, subject, questions }
 }
 
-const LESSONS: readonly LessonQuiz[] = [parseLesson(rawLesson2)]
+const LESSONS: readonly LessonQuiz[] = [
+  parseLesson(rawLesson2),
+  parseLesson(rawLesson3),
+]
 
 export function getLessonQuiz(id: number): LessonQuiz | undefined {
   return LESSONS.find((lesson) => lesson.lessonId === id)
