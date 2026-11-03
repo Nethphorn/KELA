@@ -2,6 +2,7 @@ import type { CurrencyStat, NavItem } from '../types'
 
 export const NAV_ITEMS: readonly NavItem[] = [
   { path: '/', label: 'Home', icon: 'cottage' },
+  { path: '/lessons', label: 'Lessons', icon: 'school' },
   { path: '/subjects', label: 'Subjects', icon: 'menu_book' },
   { path: '/avatar', label: 'Avatar Studio', icon: 'styler' },
   { path: '/progress', label: 'Progress', icon: 'military_tech' },
